@@ -2,7 +2,7 @@
     font-family: "Rubik";
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/rubik/rubik-400.woff2") format("woff2");
+    src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -10,7 +10,7 @@
     font-family: "Rubik";
     font-style: normal;
     font-weight: 700;
-    src: url("fonts/rubik/rubik-700.woff2") format("woff2");
+    src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -18,7 +18,7 @@
     font-family: "Rubik";
     font-style: normal;
     font-weight: 800;
-    src: url("fonts/rubik/rubik-800.woff2") format("woff2");
+    src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -26,12 +26,12 @@
     font-family: "Raleway";
     font-style: normal;
     font-weight: 800;
-    src: url("fonts/raleway/raleway-800.woff2") format("woff2");
+    src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
     font-display: swap;
 }
 
 body {
-    font-family: Rubik, sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 18px;
     line-height: 30px;
     font-weight: 400;
@@ -65,7 +65,7 @@ ul:not(.transport-company) {
 }
 
 .menu-link, .btn {
-    font-family: Raleway, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 21px;
@@ -80,8 +80,99 @@ ul:not(.transport-company) {
     background-color: #ffffff;
 }
 
-.slider-title, .services-title, .contacts-title, .subcription-title {
-    font-family: Raleway, sans-serif;
+.main-inner {
+    color: #000000;
+}
+
+.breadcrumbs-link {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-decoration: none;
+}
+
+.catalog-products {
+    background-color: #F0F0F0;
+}
+
+.catalog-products-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.catalog-filter-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.select-control {
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.btn-up::before {
+    content: url(/images/decor/sort-up.svg);
+}
+
+.btn-down::before {
+    content: url(/images/decor/sort-down.svg);
+}
+
+.product {
+    background-color: #ffffff;
+}
+
+.product-card {
+    background-color: #FFFFFF;
+}
+
+.product-card-link {
+    text-decoration: none;
+}
+
+.product-card-title {
+    color: #000000;
+
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.product-card-price {
+    color: #444444;
+
+    line-height: 21px;
+    text-align: right;
+}
+
+.button {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.pagination {
+    background-color: #F0F0F0;
+
+}
+
+.slider-title, .services-title, .contacts-title, .subcription-title, .inner-header-title {
+    font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 50px;
     line-height: 50px;
@@ -107,7 +198,7 @@ ul:not(.transport-company) {
 }
 
 .category-item-link {
-    font-family: Raleway, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
@@ -120,7 +211,7 @@ ul:not(.transport-company) {
 }
 
 .delivery-section {
-    font-family: Raleway, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 20px;
     line-height: 23px;
@@ -190,7 +281,7 @@ ul:not(.transport-company) {
 }
 
 .footer-link {
-    font-family: Raleway, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 21px;
