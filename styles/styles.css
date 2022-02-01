@@ -357,3 +357,22 @@ ul:not(.transport-company) {
 .button-twitter::before {
     content: url(/images/decor/twitter.svg);
 }
+
+.pagination-link {
+    text-decoration: none;
+    color: #444444;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+
+.pagination-prev, .pagination-next {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000000;
+}
