@@ -39,7 +39,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-
   max-width: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
@@ -76,7 +75,6 @@ body {
   width: 1040px;
   margin: 0 auto;
   flex-direction: column;
-
 }
 
 .user-menu {
@@ -91,7 +89,6 @@ body {
 
 
 .search-field {
-
   height: 40px;
   margin: 0px 0px;
   width: 50%;
@@ -125,7 +122,6 @@ body {
 }
 
 .login {
-
   height: 30px;
   width: 50%;
 }
@@ -141,7 +137,11 @@ body {
 .catalog {
   height: 50px;
   width: 50%;
+}
 
+.catalog-navigation-link {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .navigation-list {
@@ -188,8 +188,15 @@ ul:not(.transport-company) {
 
 .page-container {
   width: 1160px;
+
   margin-left: 140px;
   margin-right: 140px;
+}
+
+.page-container-catalog {
+  width: 1440px;
+
+
 }
 
 .main-index {
@@ -201,6 +208,39 @@ ul:not(.transport-company) {
   color: #000000;
 }
 
+.inner-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 200px;
+  width: 1079px;
+  height: 85px;
+  margin-bottom: 35px;
+  margin-top: 35px;
+}
+
+.inner-header-title {
+  margin: 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  width: 432px;
+  height: 19px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  margin-top: 16px;
+  justify-content: space-between;
+}
+
+.breadcrumbs-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
 .breadcrumbs-link {
   color: #000000;
   font-size: 16px;
@@ -210,6 +250,9 @@ ul:not(.transport-company) {
 }
 
 .catalog-products {
+  display: flex;
+  width: 1440px;
+  height: 1428px;
   background-color: #F0F0F0;
 }
 
@@ -220,6 +263,15 @@ ul:not(.transport-company) {
   line-height: 19px;
   text-transform: uppercase;
   color: #000000;
+
+}
+
+.catalog-filter {
+  width: 320px;
+  height: 1316px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
 }
 
 .catalog-filter-title {
@@ -227,6 +279,35 @@ ul:not(.transport-company) {
   font-size: 18px;
   line-height: 20px;
   color: #000000;
+  padding: 20px 40px;
+
+}
+
+.product-sorting {
+  display: flex;
+  flex-direction: column;
+  width: 840px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 70px 40px 0px;
+
+}
+
+.product-list {
+  margin: 0;
+  padding: 0;
+}
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 840px;
+  height: 70px;
 }
 
 .select-control {
