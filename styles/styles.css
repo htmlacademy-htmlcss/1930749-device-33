@@ -311,7 +311,7 @@ ul:not(.transport-company) {
 
 }
 
-.slider-title, .services-title, .contacts-title, .subcription-title, .inner-header-title {
+.slider-title, .services-title, .contacts-title, .subscription-title, .inner-header-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -451,9 +451,90 @@ ul:not(.transport-company) {
 
 .services {
   background-color: #F0F0F0;
+  width: 1440px;
+
+
+}
+
+.services-list {
+  margin: 0;
+  padding: 0;
+}
+
+.services-item {
+  display: flex;
+  height: 391px;
+
+}
+
+.btn-services {
+  width: 280px;
+  height: 40px;
+  margin-left: 140px;
+
+}
+
+.services-container {
+  display: flex;
+  width: 694px;
+  height: 174px;
+  align-items: center;
+
+}
+
+.services-information {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  margin-left: 116px;
+  margin-right: 110px
+}
+
+.services-title {
+  width: 242px;
+  height: 50px;
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.services-information p {
+  width: 448px;
+  height: 90px;
+
+}
+
+.container-icon {
+  width: 136px;
+  height: 164px;
+}
+
+.delivery::after {
+  content: url("../images/icons/delivery.svg");
+}
+
+.garanty::after {
+  content: url("../images/icons/garanty.svg");
+}
+
+.credit::after {
+  content: url("../images/icons/credit.svg");
 }
 
 .delivery-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1160px;
+  height: 100px;
+  background-color: #F0F0F0;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.delivery-p {
+  width: 910px;
+  height: 20px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -461,30 +542,99 @@ ul:not(.transport-company) {
   text-align: center;
   color: #000000;
   text-transform: uppercase;
-  background-color: #F0F0F0;
 }
 
-.delivery-section::before {
-  content: url("../images/icons/delivery-section.svg");
+.delivery-container {
+  width: 125px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delivery-container.before {
   background-color: #FFE17F;
 }
 
-.delivery-section::after {
+.delivery-container.before::before {
+  content: url("../images/icons/delivery-section.svg");
+}
+
+.delivery-container.after::after {
   content: url("../images/icons/delivery-information.svg");
 }
 
+.contacts-list {
+  display: flex;
+  width: 1160px;
+  height: 545px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.contacts-list-item:first-child {
+  margin-right: 108px;
+  width: 520px;
+  height: 493px;
+}
+
+.contacts-list-item:last-child {
+  width: 532px;
+  height: 545px;
+}
+
+.contacts-list-item p {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.contacts-list-item .menu-link {
+  margin-top: 40px;
+}
+
+.contacts-title {
+  margin: 0;
+  margin-bottom: 48px;
+}
+
+.transport-company {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+
+}
+
 .transport-company-item {
+  display: flex;
+  margin-bottom: 19px;
+  align-items: center;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   color: #000000;
+  height: 20px;
+}
+
+.transport-company-item::before {
+  content: url("../images/icons/list-style.svg");
+  margin-right: 26px;
 }
 
 .contacts-subtitle {
-
   font-weight: 700;
   font-size: 24px;
-
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .contacts-address {
@@ -499,14 +649,51 @@ ul:not(.transport-company) {
 
 .contacts-schedule {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #F0F0F0;
+  width: 1440px;
+  height: 421px;
+  margin-top: 70px;
+}
+
+.subscription-description {
+  display: flex;
+  justify-content: space-between;
 }
 
 .subscription .btn {
   background-color: #F0F0F0;
+}
+
+.subscription-title {
+  width: 348px;
+  height: 100px;
+  margin-left: 147px;
+  margin-top: 64px;
+}
+
+.subscription-description p {
+  margin-left: 252px;
+  margin-top: 74px;
+  margin-right: 133px;
+  width: 560px;
+  height: 90px
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 141px;
+  margin-right: 141px;
+  margin-bottom: 56px;
 }
 
 .free::before {
@@ -516,6 +703,62 @@ ul:not(.transport-company) {
 .page-footer {
   background: #444444;
   color: #FFFFFF;
+  width: 1440px;
+  height: 321px;
+}
+
+.footer-container {
+  display: flex;
+  margin-left: 140px;
+  margin-right: 140px;
+  justify-content: space-between;
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  width: 234px;
+  height: 182px;
+  margin-top: 62px;
+}
+
+.footer-logo {
+  margin-bottom: 35px;
+}
+
+.page-footer-link {
+  display: flex;
+  flex-direction: column;
+  width: 444px;
+  margin-top: 137px;
+  margin-bottom: 61px;
+}
+
+.footer-menu {
+  display: flex;
+  width: 100%;
+  height: 21px;
+  margin: 0 auto;
+}
+
+.footer-navigation-list, .footer-social-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.footer-social {
+  display: flex;
+  margin: 0 auto;
+  width: 150px;
+  height: 40px;
+  margin-top: 62px;
+}
+
+.footer-navigation-item, .footer-social-item {
+  display: flex;
 }
 
 .page-footer .contacts-address {
@@ -532,7 +775,6 @@ ul:not(.transport-company) {
   text-align: center;
   text-decoration: none;
   color: #FFFFFF;
-
 }
 
 .navigation-list, .footer-social-list {
@@ -545,18 +787,17 @@ ul:not(.transport-company) {
   color: #FFFFFF;
 }
 
-
-
-.delivery::after {
-  content: url("../images/icons/delivery.svg");
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 140px;
+  margin-bottom: 60px;
+  justify-content: space-between;
 }
 
-.garanty::after {
-  content: url("../images/icons/garanty.svg");
-}
-
-.credit::after {
-  content: url("../images/icons/credit.svg");
+.html-academy-link {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .button-facebook::before {
