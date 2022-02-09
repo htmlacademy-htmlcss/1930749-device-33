@@ -50,11 +50,15 @@ body {
 
 .page-header {
   color: #000000;
+  width: 1160px;
+  height: 300px;
   background-color: #ffe17f;
   margin-left: 140px;
   margin-top: 40px;
   margin-right: 140px;
-  width: 1160px;
+  position: relative;
+
+
 }
 
 .visually-hidden {
@@ -73,47 +77,91 @@ body {
 .header-container {
   display: flex;
   width: 1040px;
-  margin: 0 auto;
+  height: 186px;
   flex-direction: column;
+  position: absolute;
+  padding-left: 60px;
+  padding-right: 60px;
+  top: -22px;
+  bottom: 22px;
+}
+
+.header-logo {
+  margin-bottom: 30px;
 }
 
 .user-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 0px;
+  margin: 0px 0px 30px 0px;
   width: 1040px;
   height: 40px;
 }
 
-
-
 .search-field {
+  display: flex;
   height: 40px;
   margin: 0px 0px;
   width: 50%;
 }
 
 .search {
+  font-family: "Rubik", sans-serif;
   font-size: 16px;
   line-height: 20px;
 }
 
-.navigation {
-  width: 50%;
+.input-search {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 0px 16px;
+  width: 359px;
+  height: 40px;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 50px 0px 0px 50px;
+  background-color: #FFE17F;
+}
 
+.button-search {
+  margin: 0;
+  width: 160px;
+  height: 40px;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 0px 20px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-left: 0px;
+  background-color: #FFE17F;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.login {
+  display: flex;
+  height: 30px;
+  width: 231px;
+  padding-left: 27px;
 }
 
 .navigation-user {
   display: flex;
   margin: 0;
   padding: 0;
-  justify-content: flex-end;
-
 }
 
 .navigation-user .navigation-item {
-  display: inline-block;
   margin: 0px 12px;
 }
 
@@ -121,27 +169,34 @@ body {
   margin-right: 0;
 }
 
-.login {
-  height: 30px;
-  width: 50%;
-}
-
 .menu {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0px;
+
   width: 1040px;
   height: 50px;
 }
 
 .catalog {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   height: 50px;
-  width: 50%;
+  width: 293px;
+
+}
+
+.catalog .menu-link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 57px;
 }
 
 .catalog-navigation-link {
   display: flex;
   justify-content: flex-start;
+
+
 }
 
 .navigation-list {
@@ -149,17 +204,18 @@ body {
   padding: 0;
   height: 21px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  width: 471px;
+  height: 50px;
+
 }
 
 .navigation-list .navigation-item {
-  display: inline-block;
-  height: 21px;
-  margin: 0px 45px;
-}
+  padding-top: 15px;
+  padding-bottom: 15px;
 
+}
 
 .navigation-link, .menu-link {
   color: #000000;
@@ -182,13 +238,32 @@ ul:not(.transport-company) {
   background-color: #ffe17f;
 }
 
+.btn {
+  height: 40px;
+  border: 0px;
+}
+
+.indicator {
+  border: 0px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icons/white-circle.svg");
+}
+
+.indicator:not(:last-child) {
+  margin-right: 20px;
+}
+
+.current-indicator {
+  background-image: url("../images/icons/black-circle.svg");
+}
+
 .main-container {
   flex-grow: 1
 }
 
 .page-container {
   width: 1160px;
-
   margin-left: 140px;
   margin-right: 140px;
 }
@@ -346,6 +421,7 @@ ul:not(.transport-company) {
 
 .card-description {
   width: 50%;
+  position: relative;
 }
 
 .product {
@@ -404,9 +480,11 @@ ul:not(.transport-company) {
   height: 100px;
   margin-bottom: 29px;
   margin-right: 15px;
+  position: relative;
 }
 
 .slider {
+  margin-top: -80px;
   margin-bottom: 70px;
 }
 
@@ -440,6 +518,9 @@ ul:not(.transport-company) {
   font-size: 180px;
   text-align: right;
   color: #FFFFFF;
+  position: absolute;
+  right: 49px;
+  top: 5px;
 
 }
 
@@ -530,7 +611,7 @@ ul:not(.transport-company) {
 }
 
 .services {
-  background-color: #F0F0F0;
+
   width: 1440px;
 
 
@@ -552,9 +633,19 @@ ul:not(.transport-company) {
   height: 40px;
   margin-left: 140px;
 
+
 }
 
 .services-container {
+  background-color: #F0F0F0;
+  width: 1440px;
+  height: 289px;
+  display: flex;
+  margin-top: 102px;
+
+}
+
+.services-information {
   display: flex;
   width: 694px;
   height: 174px;
@@ -562,7 +653,7 @@ ul:not(.transport-company) {
 
 }
 
-.services-information {
+.services-description {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -744,12 +835,30 @@ ul:not(.transport-company) {
 }
 
 .subscription-description {
+
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
-.subscription .btn {
+.field {
+  border: 0px;
+  border-bottom: 3px solid #C4C4C4;
+  height: 55px;
   background-color: #F0F0F0;
+  width: 557px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0;
+}
+
+.btn-subscription {
+  background-color: #F0F0F0;
+  border: 3px solid #CECECE;
+  width: 253px;
+  height: 57px;
 }
 
 .subscription-title {
@@ -767,6 +876,11 @@ ul:not(.transport-company) {
   height: 90px
 }
 
+.subscription-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .subscription-form {
   display: flex;
   justify-content: space-between;
@@ -774,6 +888,10 @@ ul:not(.transport-company) {
   margin-left: 141px;
   margin-right: 141px;
   margin-bottom: 56px;
+}
+
+.free {
+  margin-right: 140px;
 }
 
 .free::before {

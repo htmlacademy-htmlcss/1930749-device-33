@@ -11,9 +11,11 @@
   <header class="page-header">
     <div class="header-container">
       <h1 class="visually-hidden">Device</h1>
-      <img class="logo" alt="Логотип device" src="images/logo.svg" width="145" height="36" />
+      <img class="header-logo" alt="Логотип device" src="images/logo.svg" width="145" height="36" />
       <div class="user-menu">
-        <div class="search-field"><label><span class="visually-hidden">Поиск по сайту</span>
+        <div class="search-field">
+          <label>
+            <span class="visually-hidden">Поиск по сайту</span>
             <input class="input-search search" type="search" placeholder="Поиск по сайту" /></label>
           <button class="button-search search" type="submit">Найти</button>
         </div>
@@ -78,9 +80,9 @@
               <div class="btn-slider">
                 <button class="btn" type="button">Подробнее</button>
                 <div class="indicator-group">
-                  <button class="btn indicator" type="button"></button>
-                  <button class="btn indicator" type="button"></button>
-                  <button class="btn indicator" type="button"></button>
+                  <button class="indicator current-indicator" type="button"></button>
+                  <button class="indicator" type="button"></button>
+                  <button class="indicator" type="button"></button>
                 </div>
               </div>
               <ul class="characterictic-list">
@@ -117,9 +119,9 @@
               <div class="btn-slider">
                 <button class="btn " type="button">Подробнее</button>
                 <div class="indicator-group">
-                  <button class="btn indicator" type="button"></button>
-                  <button class="btn indicator" type="button"></button>
-                  <button class="btn indicator" type="button"></button>
+                  <button class="indicator" type="button"></button>
+                  <button class="indicator current-indicator" type="button"></button>
+                  <button class="indicator" type="button"></button>
                 </div>
               </div>
               <ul class="characterictic-list">
@@ -152,9 +154,9 @@
               <div class="btn-slider">
                 <button class="btn" type="button">Подробнее</button>
                 <div class="indicator-group">
-                  <button class="btn indicator" type="button"></button>
-                  <button class="btn indicator" type="button"></button>
-                  <button class="btn indicator" type="button"></button>
+                  <button class="indicator" type="button"></button>
+                  <button class="indicator" type="button"></button>
+                  <button class="indicator current-indicator" type="button"></button>
                 </div>
               </div>
               <ul class="characterictic-list">
@@ -206,44 +208,50 @@
       <h2 class="visually-hidden">Сервисы</h2>
       <ul class="services-list">
         <li class="services-item">
-          <button class="btn btn-services" type="button">Доставка</button>
           <div class="services-container">
+            <button class="btn btn-services" type="button">Доставка</button>
             <div class="services-information">
-              <h3 class="services-title">Доставка</h3>
-              <p>
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы
-                неплохо заработаем, поднимая его на ваш этаж.
-              </p>
+              <div class="services-description">
+                <h3 class="services-title">Доставка</h3>
+                <p>
+                  Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы
+                  неплохо заработаем, поднимая его на ваш этаж.
+                </p>
+              </div>
+              <div class="container-icon delivery"></div>
             </div>
-            <div class="container-icon delivery"></div>
           </div>
         </li>
         <li class="services-item">
-          <button class="btn btn-services" type="button">Гарантия</button>
-
           <div class="services-container">
+            <button class="btn btn-services" type="button">Гарантия</button>
+
             <div class="services-information">
-              <h3 class="services-title">Гарантия</h3>
-              <p>
-                Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим
-                вам новый. Товар, не дом, конечно же.
-              </p>
+              <div class="services-description">
+                <h3 class="services-title">Гарантия</h3>
+                <p>
+                  Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим
+                  вам новый. Товар, не дом, конечно же.
+                </p>
+              </div>
+              <div class="container-icon garanty"></div>
             </div>
-            <div class="container-icon garanty"></div>
           </div>
         </li>
         <li class="services-item">
-          <button class="btn btn-services" type="button">Кредит</button>
-
           <div class="services-container">
+            <button class="btn btn-services" type="button">Кредит</button>
+
             <div class="services-information">
-              <h3 class="services-title">Кредит</h3>
-              <p>
-                Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
-                выгодные условия кредита. Выгодные для банка, разумеется.
-              </p>
+              <div class="services-description">
+                <h3 class="services-title">Кредит</h3>
+                <p>
+                  Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
+                  выгодные условия кредита. Выгодные для банка, разумеется.
+                </p>
+              </div>
+              <div class="container-icon credit"></div>
             </div>
-            <div class="container-icon credit"></div>
           </div>
         </li>
       </ul>
@@ -306,11 +314,14 @@
           спецпредложения и вот это вот всё.
         </p>
       </div>
-      <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-        <input class="field" type="email" name="subscription-email" placeholder="Ваш e-mail" />
-        <button type="button" class="btn">Подписаться</button>
+      <div class="subscription-container">
+        <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="field" type="email" name="subscription-email" placeholder="Ваш e-mail" />
+          <button type="button" class="btn btn-subscription">Подписаться</button>
+
+        </form>
         <p class="free">Это бесплатно</p>
-      </form>
+      </div>
     </section>
 
   </main>
