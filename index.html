@@ -34,7 +34,7 @@
         </nav>
       </div>
       <div class="menu">
-        <div class="catalog">
+        <div class="menu-catalog">
           <a class="menu-link" href="catalog.html"> Каталог товаров </a>
         </div>
 
@@ -205,13 +205,20 @@
       </section>
     </div>
     <section class="services">
-      <h2 class="visually-hidden">Сервисы</h2>
-      <ul class="services-list">
-        <li class="services-item">
-          <div class="services-container">
-            <button class="btn btn-services" type="button">Доставка</button>
+
+      <div class="page-container services-container">
+
+        <h2 class="visually-hidden">Сервисы</h2>
+
+        <div class="services-navigation">
+          <button class="btn btn-services" type="button">Доставка</button>
+          <button class="btn btn-services" type="button">Гарантия</button>
+          <button class="btn btn-services" type="button">Кредит</button>
+        </div>
+        <ul class="services-list">
+          <li class="services-item">
             <div class="services-information">
-              <div class="services-description">
+              <div class="services-description ">
                 <h3 class="services-title">Доставка</h3>
                 <p>
                   Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы
@@ -220,41 +227,28 @@
               </div>
               <div class="container-icon delivery"></div>
             </div>
-          </div>
-        </li>
-        <li class="services-item">
-          <div class="services-container">
-            <button class="btn btn-services" type="button">Гарантия</button>
+          </li>
+          <li class="services-item visually-hidden">
+            <h3 class="services-title">Гарантия</h3>
+            <p>
+              Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим
+              вам новый. Товар, не дом, конечно же.
+            </p>
+            <div class="container-icon garanty"></div>
 
-            <div class="services-information">
-              <div class="services-description">
-                <h3 class="services-title">Гарантия</h3>
-                <p>
-                  Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим
-                  вам новый. Товар, не дом, конечно же.
-                </p>
-              </div>
-              <div class="container-icon garanty"></div>
-            </div>
-          </div>
-        </li>
-        <li class="services-item">
-          <div class="services-container">
-            <button class="btn btn-services" type="button">Кредит</button>
+          </li>
+          <li class="services-item visually-hidden">
+            <h3 class="services-title">Кредит</h3>
+            <p>
+              Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
+              выгодные условия кредита. Выгодные для банка, разумеется.
+            </p>
+            <div class="container-icon credit"></div>
 
-            <div class="services-information">
-              <div class="services-description">
-                <h3 class="services-title">Кредит</h3>
-                <p>
-                  Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
-                  выгодные условия кредита. Выгодные для банка, разумеется.
-                </p>
-              </div>
-              <div class="container-icon credit"></div>
-            </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+
+        </ul>
+      </div>
 
     </section>
     <div class="page-container">
@@ -307,27 +301,29 @@
       </section>
     </div>
     <section class="subscription">
-      <div class="subscription-description">
-        <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p>
-          Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции,
-          спецпредложения и вот это вот всё.
-        </p>
-      </div>
-      <div class="subscription-container">
-        <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="field" type="email" name="subscription-email" placeholder="Ваш e-mail" />
-          <button type="button" class="btn btn-subscription">Подписаться</button>
+      <div class="page-container subscription-container">
+        <div class="subscription-description">
+          <h2 class="subscription-title">Подпишитесь на рассылку</h2>
+          <p>
+            Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции,
+            спецпредложения и вот это вот всё.
+          </p>
+        </div>
+        <div class="subscription-container-form">
+          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="field" type="email" name="subscription-email" placeholder="Ваш e-mail" />
+            <button type="button" class="btn btn-subscription">Подписаться</button>
 
-        </form>
-        <p class="free">Это бесплатно</p>
+          </form>
+          <p class="free">Это бесплатно</p>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer class="page-footer">
-    <div class="footer-container">
+    <div class="footer-container page-container">
       <section class="footer-contacts">
         <img class="footer-logo" alt="Логотип device" src="images/logo-yellow.svg" width="145" height="36" />
         <address class="contacts-address">
