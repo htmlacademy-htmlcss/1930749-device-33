@@ -207,18 +207,20 @@ ul:not(.transport-company) {
 }
 
 .navigation-list {
+
   margin: 0;
   padding: 0;
-  height: 21px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
   width: 471px;
   height: 50px;
-
 }
 
-.navigation-list .navigation-item {
+.menu-link {
+  display: block;
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -560,7 +562,7 @@ ul:not(.transport-company) {
   display: flex;
   margin: 0;
   padding: 0;
-
+  flex-wrap: wrap;
 }
 
 .category-item {
@@ -568,6 +570,10 @@ ul:not(.transport-company) {
   margin-right: 40px;
   width: 160px;
   height: 253px;
+}
+
+.category-item:last-child {
+  margin-right: 0;
 }
 
 .category-item-link {
@@ -617,10 +623,25 @@ ul:not(.transport-company) {
 }
 
 .services {
-  background-color: #F0F0F0;
+  background-color: #FFFFFF;
   height: 391px;
+  position: relative;
+
 }
 
+.services::before {
+  content: "";
+  background-color: #F0F0F0;
+  height: 289px;
+  width: 100%;
+  position: absolute;
+  top: 102px;
+}
+
+.position-absolute {
+  display: flex;
+  position: absolute;
+}
 
 
 .services-container {
@@ -822,7 +843,7 @@ ul:not(.transport-company) {
 }
 
 .contacts-schedule {
-  list-style-type: none;
+
   margin: 0;
   padding: 0;
 }
@@ -941,8 +962,10 @@ ul:not(.transport-company) {
 }
 
 .footer-navigation-list, .footer-social-list {
+
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -956,7 +979,11 @@ ul:not(.transport-company) {
   margin-top: 62px;
 }
 
-.footer-navigation-item, .footer-social-item {
+.footer-navigation-item {
+  display: flex;
+}
+
+.footer-social-item {
   display: flex;
 }
 
@@ -976,9 +1003,6 @@ ul:not(.transport-company) {
   color: #FFFFFF;
 }
 
-.navigation-list, .footer-social-list {
-  list-style-type: none;
-}
 
 .page-footer .contacts-phone {
   font-size: 16px;
