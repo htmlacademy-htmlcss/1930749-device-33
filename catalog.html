@@ -11,7 +11,7 @@
   <header class="page-header">
     <div class="header-container">
       <a class="catalog-navigation-link" href="index.html">
-        <img class="logo" alt="Логотип device" src="images/logo.svg" width="145" height="36" /></a>
+        <img class="header-logo" alt="Логотип device" src="images/logo.svg" width="145" height="36" /></a>
       <div class="user-menu">
         <div class="search-field">
           <label>
@@ -56,22 +56,23 @@
   </header>
 
   <main class="main-inner main-container">
-    <div class="page-container-catalog">
-      <header class="inner-header">
-        <h1 class="inner-header-title">Моноподы для селфи</h1>
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">Главная</a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Моноподы для селфи</a>
-          </li>
-        </ul>
-      </header>
-      <section class="catalog-products">
+
+    <header class="inner-header page-container">
+      <h1 class="inner-header-title">Моноподы для селфи</h1>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link">Моноподы для селфи</a>
+        </li>
+      </ul>
+    </header>
+    <section class="catalog-products">
+      <div class="catalog-container page-container">
         <div class="catalog-filter">
           <h2 class="catalog-products-title">Фильтр:</h2>
           <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
@@ -139,12 +140,13 @@
               <option value="cheap">Сначала дешёвые</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
-            <button type="button" class="btn-up">
-              <span class="visually-hidden">Вверх</span>
-            </button>
-            <button type="button" class="btn-down">
-              <span class="visually-hidden">Вниз</span>
-            </button>
+            <div class="sorting-button"><button type="button" class="btn-up">
+                <span class="visually-hidden">Вверх</span>
+              </button>
+              <button type="button" class="btn-down">
+                <span class="visually-hidden">Вниз</span>
+              </button>
+            </div>
           </div>
           <div class="product">
             <ul class="product-list">
@@ -181,7 +183,7 @@
                 <b class="product-card-price">1500 ₽</b>
               </li>
             </ul>
-            <button class="button" type="button">Загрузить ещё</button>
+            <button class="product-button" type="button">Загрузить ещё</button>
             <ul class="pagination">
               <li class="pagination-item">
                 <a class="pagination-link pagination-prev pagination-disabled">
@@ -211,12 +213,13 @@
             </ul>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="page-footer">
-    <div class="footer-container">
+    <div class="footer-container page-container">
       <section class="footer-contacts">
         <h3 class="visually-hidden">Адресс</h3>
         <img class="footer-logo" alt="Логотип device" src="images/logo-yellow.svg" width="145" height="36" />

@@ -257,8 +257,8 @@ ul:not(.transport-company) {
   margin: 0 auto;
 }
 
-.page-container-catalog {
-  width: 1440px;
+/* .page-container-catalog {
+  width: 1440px; */
 
 
 }
@@ -280,11 +280,12 @@ ul:not(.transport-company) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 200px;
-  width: 1079px;
+
+
   height: 85px;
   margin-bottom: 35px;
   margin-top: 35px;
+  padding-left: 60px;
 }
 
 .inner-header-title {
@@ -317,10 +318,13 @@ ul:not(.transport-company) {
   text-decoration: none;
 }
 
+.catalog-container {
+  display: flex;
+
+}
+
 .catalog-products {
   display: flex;
-  width: 1440px;
-
   background-color: #F0F0F0;
 }
 
@@ -331,14 +335,16 @@ ul:not(.transport-company) {
   line-height: 19px;
   text-transform: uppercase;
   color: #000000;
-
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .catalog-filter {
   width: 320px;
   display: flex;
   flex-direction: column;
-  margin-left: 200px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .catalog-filter-title {
@@ -346,8 +352,26 @@ ul:not(.transport-company) {
   font-size: 18px;
   line-height: 20px;
   color: #000000;
-  padding: 20px 40px;
+  margin: 0;
+  margin-bottom: 20px;
 
+}
+
+.catalog-filter-form {
+  margin-top: 60px;
+}
+
+.catalog-filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 47px;
+
+}
+
+.catalog-filter-list {
+  padding: 0;
+  margin: 0;
 }
 
 .product-sorting {
@@ -375,6 +399,7 @@ ul:not(.transport-company) {
   align-items: center;
   width: 840px;
   height: 70px;
+  padding: 25px 40px;
 }
 
 .select-control {
@@ -423,6 +448,8 @@ ul:not(.transport-company) {
 
 .product-card {
   background-color: #FFFFFF;
+  width: 360px;
+  height: 452px;
 }
 
 .product-card-link {
@@ -445,19 +472,37 @@ ul:not(.transport-company) {
   text-align: right;
 }
 
-.button {
+.product-button {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 19px;
   text-transform: uppercase;
-  text-align: center;
+
   background-color: #FFFFFF;
+  width: 760px;
+  height: 55px;
+
+  margin-bottom: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .pagination {
   background-color: #F0F0F0;
+  width: 760px;
+  height: 71px;
+  display: flex;
+  justify-content: space-between;
 
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 78px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .slider-title, .services-title, .contacts-title, .subscription-title, .inner-header-title {
