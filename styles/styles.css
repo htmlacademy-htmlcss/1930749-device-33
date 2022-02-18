@@ -503,22 +503,59 @@ ul:not(.transport-company) {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 3px solid #E5E5E5;
 }
 
+.product-button:hover {
+  border: 3px solid #000000;
+  cursor: pointer;
+}
 
-.pagination {
-  background-color: #F0F0F0;
-  width: 760px;
-  height: 71px;
+.pagination-container {
+  background-color: #EBEBEB;
   display: flex;
   justify-content: space-between;
-
+  width: 760px;
+  height: 71px;
+  margin-bottom: 78px;
   align-items: center;
+}
+
+.pagination-prev, .pagination-next {
+  padding: 25px;
+}
+
+.pagination-next:hover, .pagination-prev:hover {
+  background: #DCDCDC;
+  cursor: pointer;
+}
+
+.pagination-prev {
+  width: 128px;
+}
+
+.pagination-next {
+  width: 141px;
+}
+
+.pagination {
+  display: flex;
   margin: 0;
   padding: 0;
-  margin-bottom: 78px;
-  padding-left: 25px;
-  padding-right: 25px;
+  width: 200px;
+  height: 40px;
+  margin-left: 145px;
+  margin-right: 145px;
+}
+
+.pagination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+  color: #444444;
 }
 
 .slider-title, .services-title, .contacts-title, .subscription-title, .inner-header-title {
