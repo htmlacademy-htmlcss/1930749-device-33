@@ -242,12 +242,15 @@ ul:not(.transport-company) {
   line-height: 21px;
   text-transform: uppercase;
   text-align: center;
-  background-color: #ffe17f;
+
 }
 
 .btn {
   height: 40px;
   border: 0px;
+  background-color: #ffe17f;
+  width: 220px;
+
 }
 
 
@@ -257,11 +260,6 @@ ul:not(.transport-company) {
   margin: 0 auto;
 }
 
-/* .page-container-catalog {
-  width: 1440px; */
-
-
-}
 
 .main-index {
   color: #444444;
@@ -380,19 +378,6 @@ ul:not(.transport-company) {
   width: 840px;
 }
 
-.product {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 70px 40px 0px;
-
-}
-
-.product-list {
-  margin: 0;
-  padding: 0;
-}
-
 .sorting {
   display: flex;
   justify-content: space-between;
@@ -442,32 +427,65 @@ ul:not(.transport-company) {
   position: relative;
 }
 
+
 .product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 70px 40px 0px;
   background-color: #ffffff;
+}
+
+.product-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 40px 44px;
+  margin-bottom: 44px;
 }
 
 .product-card {
   background-color: #FFFFFF;
   width: 360px;
   height: 452px;
+
 }
 
 .product-card-link {
   text-decoration: none;
+  height: 452px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card-image {
+  margin-bottom: 32px;
+}
+
+.product-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 360px;
+  height: 40px;
+
 }
 
 .product-card-title {
   color: #000000;
-
-
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  max-width: 60%;
 }
 
 .product-card-price {
   color: #444444;
-
   line-height: 21px;
   text-align: right;
 }
@@ -478,31 +496,66 @@ ul:not(.transport-company) {
   font-weight: 800;
   line-height: 19px;
   text-transform: uppercase;
-
   background-color: #FFFFFF;
   width: 760px;
   height: 55px;
-
   margin-bottom: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 3px solid #E5E5E5;
 }
 
+.product-button:hover {
+  border: 3px solid #000000;
+  cursor: pointer;
+}
 
-.pagination {
-  background-color: #F0F0F0;
-  width: 760px;
-  height: 71px;
+.pagination-container {
+  background-color: #EBEBEB;
   display: flex;
   justify-content: space-between;
-
+  width: 760px;
+  height: 71px;
+  margin-bottom: 78px;
   align-items: center;
+}
+
+.pagination-prev, .pagination-next {
+  padding: 25px;
+}
+
+.pagination-next:hover, .pagination-prev:hover {
+  background: #DCDCDC;
+  cursor: pointer;
+}
+
+.pagination-prev {
+  width: 128px;
+}
+
+.pagination-next {
+  width: 141px;
+}
+
+.pagination {
+  display: flex;
   margin: 0;
   padding: 0;
-  margin-bottom: 78px;
-  padding-left: 25px;
-  padding-right: 25px;
+  width: 200px;
+  height: 40px;
+  margin-left: 145px;
+  margin-right: 145px;
+}
+
+.pagination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+  color: #444444;
 }
 
 .slider-title, .services-title, .contacts-title, .subscription-title, .inner-header-title {
@@ -744,37 +797,41 @@ ul:not(.transport-company) {
 }
 
 
-.container-icon {
+
+
+.delivery::after {
+  content: url("../images/icons/delivery.svg");
   width: 136px;
   height: 164px;
 }
 
-.delivery::after {
-  content: url("../images/icons/delivery.svg");
-}
-
 .garanty::after {
   content: url("../images/icons/garanty.svg");
+  width: 136px;
+  height: 164px;
 }
 
 .credit::after {
   content: url("../images/icons/credit.svg");
+  width: 136px;
+  height: 164px;
 }
 
 .delivery-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   width: 1160px;
   height: 100px;
   background-color: #F0F0F0;
   margin-top: 70px;
   margin-bottom: 70px;
+  position: relative;
 }
 
 .delivery-p {
   width: 910px;
-  height: 20px;
+
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -782,26 +839,34 @@ ul:not(.transport-company) {
   text-align: center;
   color: #000000;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-.delivery-container {
+.delivery-p::before {
+  content: url("../images/icons/delivery-section.svg");
+  background-color: #FFE17F;
   width: 125px;
   height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding-top: 35px;
+  padding-bottom: 34px;
+  padding-left: 39px;
+  padding-right: 39px;
 }
 
-.delivery-container.before {
-  background-color: #FFE17F;
-}
-
-.delivery-container.before::before {
-  content: url("../images/icons/delivery-section.svg");
-}
-
-.delivery-container.after::after {
+.delivery-p::after {
   content: url("../images/icons/delivery-information.svg");
+  width: 125px;
+  height: 100px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 30px 42px;
 }
 
 .contacts-list {
@@ -809,8 +874,7 @@ ul:not(.transport-company) {
   width: 1160px;
   height: 545px;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
+  padding-top: 40px;
 }
 
 .contacts-list-item {
