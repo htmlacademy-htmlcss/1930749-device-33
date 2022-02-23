@@ -62,6 +62,10 @@ body {
   position: relative;
 }
 
+.header-catalog {
+  height: 186px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -249,17 +253,13 @@ ul:not(.transport-company) {
 }
 
 .login {
-
   height: 30px;
   width: 231px;
-
-
 }
 
 .menu {
   display: flex;
   justify-content: space-between;
-
   width: 1040px;
   height: 50px;
 }
@@ -286,12 +286,9 @@ ul:not(.transport-company) {
 .catalog-navigation-link {
   display: flex;
   justify-content: flex-start;
-
-
 }
 
 .navigation-list {
-
   margin: 0;
   padding: 0;
   display: flex;
@@ -301,6 +298,8 @@ ul:not(.transport-company) {
   align-content: center;
   width: 471px;
   height: 50px;
+  position: relative;
+  z-index: 10;
 }
 
 .menu-link {
@@ -424,14 +423,25 @@ ul:not(.transport-company) {
   padding: 0;
   align-items: center;
   margin-top: 16px;
-  justify-content: space-between;
 }
 
 .breadcrumbs-item {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: 36px;
+  position: relative;
+}
 
+.breadcrumbs-item::after {
+  content: url("../images/icons/nav-arrow.svg");
+  position: absolute;
+  right: -20px;
+  top: -8px;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
 }
 
 .breadcrumbs-link {
@@ -442,9 +452,21 @@ ul:not(.transport-company) {
   text-decoration: none;
 }
 
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:focus-within {
+  outline: 2px solid #AF4FFF;
+}
+
 .catalog-container {
   display: flex;
-
 }
 
 .catalog-products {
@@ -477,12 +499,13 @@ ul:not(.transport-company) {
   line-height: 20px;
   color: #000000;
   margin: 0;
+  padding: 0;
   margin-bottom: 20px;
-
+  position: relative;
 }
 
 .catalog-filter-form {
-  margin-top: 60px;
+  margin-top: 35px;
 }
 
 .catalog-filter-group {
@@ -490,12 +513,22 @@ ul:not(.transport-company) {
   margin: 0;
   padding: 0;
   margin-bottom: 47px;
+}
 
+.catalog-filter-title::before {
+  content: url("../images/icons/line-1.svg");
+  line-height: 0px;
+  position: absolute;
+  top: -12px;
 }
 
 .catalog-filter-list {
   padding: 0;
   margin: 0;
+}
+
+.btn-filter {
+  background: transparent;
 }
 
 .product-sorting {
@@ -519,6 +552,40 @@ ul:not(.transport-company) {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.select-control:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.select-control:active {
+  opacity: 0.3;
+}
+
+.select-control:focus-within {
+  outline: 2px solid #AF4FFF;
+}
+
+.btn-sorting {
+  border: none;
+  opacity: 0.3;
+}
+
+.btn-sorting:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.btn-sorting:active {
+  opacity: 1;
+  cursor: default;
+}
+
+.btn-sorting:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .btn-up::before {
@@ -527,6 +594,7 @@ ul:not(.transport-company) {
 
 .btn-down::before {
   content: url("../images/icons/sort-down.svg");
+
 }
 
 .gallery {
@@ -537,7 +605,6 @@ ul:not(.transport-company) {
 .card-item {
   display: flex;
   height: 560px;
-
 }
 
 .card-img {
@@ -552,7 +619,6 @@ ul:not(.transport-company) {
   width: 50%;
   position: relative;
 }
-
 
 .product {
   display: flex;
@@ -575,19 +641,53 @@ ul:not(.transport-company) {
   background-color: #FFFFFF;
   width: 360px;
   height: 452px;
-
+  position: relative;
 }
 
 .product-card-link {
   text-decoration: none;
-  height: 452px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-.product-card-image {
-  margin-bottom: 32px;
+.btn-product {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  background: transparent;
+}
+
+.product-card-link:hover img {
+  opacity: 0.3;
+  outline: 1px solid #000000;
+
+}
+
+.product-card-link:hover {
+  cursor: default;
+
+}
+
+.product-card-link:hover .product-card-title {
+  opacity: 0.6;
+}
+
+.product-card-link:hover .btn-product {
+  display: block;
+}
+
+.product-card-link:active .product-card-info {
+  opacity: 0.3;
+}
+
+.product-card-link:active .btn-product {
+  display: block;
+}
+
+.product-card-link:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .product-card-info {
@@ -596,7 +696,7 @@ ul:not(.transport-company) {
   align-items: flex-start;
   width: 360px;
   height: 40px;
-
+  margin-top: auto;
 }
 
 .product-card-title {
@@ -637,6 +737,15 @@ ul:not(.transport-company) {
   cursor: pointer;
 }
 
+.product-button:active {
+  border: 3px solid #000000;
+  opacity: 0.3;
+}
+
+.product-button:focus-within {
+  outline: 2px solid #AF4FFF;
+}
+
 .pagination-container {
   background-color: #EBEBEB;
   display: flex;
@@ -654,6 +763,19 @@ ul:not(.transport-company) {
 .pagination-next:hover, .pagination-prev:hover {
   background: #DCDCDC;
   cursor: pointer;
+}
+
+.pagination-next:active, .pagination-prev:active {
+  background: #DCDCDC;
+  cursor: default;
+}
+
+.pagination-prev:active span, .pagination-next:active span {
+  opacity: 0.3;
+}
+
+.pagination-next:focus, .pagination-prev:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .pagination-prev {
@@ -682,6 +804,42 @@ ul:not(.transport-company) {
   height: 40px;
   opacity: 0.3;
   color: #444444;
+}
+
+.pagination-link {
+  text-decoration: none;
+  color: #444444;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+
+.pagination-prev, .pagination-next {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+
+.pagination-item:hover {
+  opacity: 1;
+}
+
+.pagination-item:active {
+  opacity: 0.1;
+  cursor: default;
+}
+
+.pagination-item:focus-within {
+  outline: 2px solid #AF4FFF;
+}
+
+.pagination-item:focus-within a {
+  outline: none;
 }
 
 .slider-title, .services-title, .contacts-title, .subscription-title, .inner-header-title {
@@ -1195,6 +1353,10 @@ ul:not(.transport-company) {
   padding: 0;
 }
 
+.field:focus-within {
+  outline: none;
+}
+
 .btn-subscription {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -1421,35 +1583,20 @@ ul:not(.transport-company) {
   outline: none;
 }
 
-.button-facebook::before {
-  content: url("../images/icons/facebook.svg");
-
+.social-link:hover svg circle {
+  fill: #FFC700;
+  fill-opacity: 1;
 }
 
-.button-instagram::before {
-  content: url("../images/icons/instagram.svg");
-
+.social-link:active svg circle {
+  fill: #FFC700;
 }
 
-.button-twitter::before {
-  content: url("../images/icons/twitter.svg");
+.social-link:active svg path {
+  fill: #C7A014
 }
 
-.pagination-link {
-  text-decoration: none;
-  color: #444444;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-}
+.social-link:focus-within svg {
+  outline: 2px solid #AF4FFF;
 
-
-.pagination-prev, .pagination-next {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #000000;
 }
