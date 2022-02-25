@@ -32,38 +32,105 @@
         <nav class="navigation">
           <ul class="navigation-user">
             <li class="navigation-item login">
-              <svg class="navigation-icon" aria-hidden="true" focusable="false" width="13" height="13"
-                viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M0 12.3889H13C12.8 9.78892 10.9 7.58892 8.3 6.88892C9.3 6.28892 10 5.18892 10 3.88892C10 1.98892 8.4 0.388916 6.5 0.388916C4.6 0.388916 3 1.98892 3 3.88892C3 5.18892 3.7 6.28892 4.7 6.88892C2.1 7.58892 0.2 9.78892 0 12.3889Z"
-                  fill="black" />
-              </svg>
-              <a href="#" class="navigation-link">Войти</a>
+
+              <a href="#" class="navigation-link">
+                <svg class="navigation-icon" aria-hidden="true" focusable="false" width="13" height="13"
+                  viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0 12.3889H13C12.8 9.78892 10.9 7.58892 8.3 6.88892C9.3 6.28892 10 5.18892 10 3.88892C10 1.98892 8.4 0.388916 6.5 0.388916C4.6 0.388916 3 1.98892 3 3.88892C3 5.18892 3.7 6.28892 4.7 6.88892C2.1 7.58892 0.2 9.78892 0 12.3889Z"
+                    fill="black" />
+                </svg>Войти</a>
             </li>
             <li class="navigation-item">
-              <svg class="navigation-icon" aria-hidden="true" focusable="false" width="10" height="13"
-                viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 0.388916H4V12.3889H6V0.388916Z" fill="black" />
-                <path d="M2 4.38892H0V12.3889H2V4.38892Z" fill="black" />
-                <path d="M10 3.38892H8V12.3889H10V3.38892Z" fill="black" />
-              </svg>
-              <a href="#" class="navigation-link">Сравнить</a>
+
+              <a href="#" class="navigation-link">
+                <svg class="navigation-icon" aria-hidden="true" focusable="false" width="10" height="13"
+                  viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 0.388916H4V12.3889H6V0.388916Z" fill="black" />
+                  <path d="M2 4.38892H0V12.3889H2V4.38892Z" fill="black" />
+                  <path d="M10 3.38892H8V12.3889H10V3.38892Z" fill="black" />
+                </svg>Сравнить</a>
             </li>
-            <li class="navigation-item">
-              <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="15"
-                viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M15.3 5.38892L11.8 5.58892L8.6 0.688916C8.5 0.488916 8.2 0.388916 8 0.388916C7.8 0.388916 7.5 0.488916 7.4 0.688916L4.2 5.58892H0.7C0.3 5.58892 0 5.88892 0 6.28892C0 6.38892 0 6.38892 0 6.48892L1.9 13.2889C2.1 13.9889 2.6 14.3889 3.3 14.3889H12.7C13.4 14.3889 13.9 13.9889 14.1 13.2889L16 6.38892C16 6.28892 16 6.28892 16 6.18892C16 5.78892 15.7 5.38892 15.3 5.38892ZM8 2.28892L10.2 5.48892H5.9L8 2.28892Z"
-                  fill="black" />
-              </svg>
-              <a href="#" class="navigation-link">Корзина</a>
+            <li class="navigation-item popover-close-button">
+              <a href="#" class="navigation-link">
+                <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="15"
+                  viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.3 5.38892L11.8 5.58892L8.6 0.688916C8.5 0.488916 8.2 0.388916 8 0.388916C7.8 0.388916 7.5 0.488916 7.4 0.688916L4.2 5.58892H0.7C0.3 5.58892 0 5.88892 0 6.28892C0 6.38892 0 6.38892 0 6.48892L1.9 13.2889C2.1 13.9889 2.6 14.3889 3.3 14.3889H12.7C13.4 14.3889 13.9 13.9889 14.1 13.2889L16 6.38892C16 6.28892 16 6.28892 16 6.18892C16 5.78892 15.7 5.38892 15.3 5.38892ZM8 2.28892L10.2 5.48892H5.9L8 2.28892Z"
+                    fill="black" />
+                </svg>Корзина</a>
+              <div class="popover popover-cart">
+                <div class="popover-content">
+                  <ul class="cart-items-list">
+                    <li class="cart-item">
+                      <div class="product-name" tabindex="0">
+                        <img class="product-card-image" src="images/catalog/selfie-stick.png"
+                          alt="Любительская селфи-палка" width="39" height="43">
+                        <p class="cart-item-title">Любительская селфи-палка</p>
+                      </div>
+                      <button type="button" class="cart-item-button">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10 1.68692L9.09091 0.777832L5 4.86874L0.909091 0.777832L0 1.68692L4.09091 5.77783L0 9.86874L0.909091 10.7778L5 6.68692L9.09091 10.7778L10 9.86874L5.90909 5.77783L10 1.68692Z"
+                            fill="white" />
+                        </svg>
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                    </li>
+                    <li class="cart-item">
+                      <div class="product-name" tabindex="0">
+                        <img class="product-card-image" src="images/catalog/professional-selfi-stick.png"
+                          alt="Профессиональная селфи-палка" width="39" height="43" />
+                        <p class="cart-item-title">Профессиональная
+                          селфи-палка</p>
+                      </div>
+                      <button type="button" class="cart-item-button">
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10 1.68692L9.09091 0.777832L5 4.86874L0.909091 0.777832L0 1.68692L4.09091 5.77783L0 9.86874L0.909091 10.7778L5 6.68692L9.09091 10.7778L10 9.86874L5.90909 5.77783L10 1.68692Z"
+                            fill="white" />
+                        </svg>
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                    </li>
+
+                  </ul>
+                  <p class="cart-information">
+                    <span>Товаров: <span class="cart-number">2</span></span>
+                    <span>Сумма: <span class="cart-sum">2000</span> ₽</span>
+                  </p>
+                  <button type="submit" class="cart-button">Открыть корзину</button>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>
       </div>
+
       <div class="menu">
         <div class="menu-catalog">
-          <a class="menu-link" href="catalog.html"> Каталог товаров </a>
+          <a class="catalog-link" href="catalog.html"> Каталог товаров</a>
+          <svg width="50" height="51" viewBox="0 0 50 51" fill="none" opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25.3889" r="24" stroke="black" stroke-width="2" />
+            <g>
+              <path d="M33 24.3889H26V17.3889H24V24.3889H17V26.3889H24V33.3889H26V26.3889H33V24.3889Z" fill="black" />
+            </g>
+          </svg>
+
+          <ul class="subcatalog">
+            <ul>
+              <li><a class="subcatalog-link" href="">Виртуальная реальность</a></li>
+              <li><a class="subcatalog-link" href="">Моноподы для селфи</a></li>
+              <li><a class="subcatalog-link" href="">Экшн-камеры</a></li>
+            </ul>
+            <ul>
+              <li><a class="subcatalog-link" href="">Фитнес-браслеты</a></li>
+              <li><a class="subcatalog-link" href="">Умные часы</a></li>
+            </ul>
+            <ul>
+              <li><a class="subcatalog-link" href="">Квадрокоптер</a></li>
+            </ul>
+          </ul>
         </div>
 
         <ul class="navigation-list">
@@ -79,6 +146,7 @@
         </ul>
       </div>
     </div>
+
   </header>
   <main class="main-index main-container">
     <div class="page-container">
@@ -219,7 +287,7 @@
             </a>
           </li>
           <li class="category-item">
-            <a class="category-item-link  action" href="#">Экшн-камеры </a>
+            <a class="category-item-link  action" href="#">Экшн-камеры</a>
           </li>
           <li class="category-item">
             <a class="category-item-link fitnes-braselet" href="#">Фитнес-браслеты
@@ -451,6 +519,43 @@
       </section>
     </div>
   </footer>
+  <div class="modal-container">
+    <div class="modal modal-delivery">
+      <section class="modal-content">
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="modal-fieldset">
+            <p class="field-group modal-name">
+              <label class="field-group-label" for="modal-name">Ваше имя:</label>
+              <input class="form-field" type="text" id="modal-name" name="modal-name" placeholder="Введите имя" />
+            </p>
+            <p class="field-group modal-email">
+              <label class="field-group-label" for="modal-email">Ваш e-mail:</label>
+              <input class="form-field" type="email" id="modal-email" name="modal-email" placeholder="Введите e-mail" />
+            </p>
+          </div>
+          <div class="modal-fieldset">
+            <p class="field-group modal-order">
+              <label class="field-group-label" for="modal-order">Что нужно привезти:</label>
+              <input class="form-field" type="text" id="modal-order" name="modal-order"
+                placeholder="В свободной форме" />
+            </p>
+            <div class="field-group modal-number">
+              <label class="field-group-label" for="modal-number">Количество:</label>
+              <p class="modal-number-container">
+                <button type="submit" class="modal-button number-minus"></button>
+                <input class="form-field field-number" type="text" value="1" id="modal-number" name="modal-number"
+                  placeholder="1" />
+                <button type="submit" class="modal-button number-plus"></button>
+              </p>
+            </div>
+          </div>
+          <button class="btn modal-form-button" type="submit"><span>Отправить</span></button>
+        </form>
+      </section>
+      <button class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
+    </div>
+  </div>
 </body>
 
 </html>
