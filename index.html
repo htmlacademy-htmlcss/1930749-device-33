@@ -106,7 +106,6 @@
           </ul>
         </nav>
       </div>
-
       <div class="menu">
         <div class="menu-catalog">
           <a class="catalog-link" href="catalog.html"> Каталог товаров</a>
@@ -116,7 +115,6 @@
               <path d="M33 24.3889H26V17.3889H24V24.3889H17V26.3889H24V33.3889H26V26.3889H33V24.3889Z" fill="black" />
             </g>
           </svg>
-
           <ul class="subcatalog">
             <ul>
               <li><a class="subcatalog-link" href="">Виртуальная реальность</a></li>
@@ -132,7 +130,6 @@
             </ul>
           </ul>
         </div>
-
         <ul class="navigation-list">
           <li class="navigation-item">
             <a href="#" class="menu-link">Доставка</a>
@@ -146,7 +143,6 @@
         </ul>
       </div>
     </div>
-
   </header>
   <main class="main-index main-container">
     <div class="page-container">
@@ -213,9 +209,7 @@
                 Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
               </p>
               <div class="btn-slider">
-
                 <button class="btn" type="button"><span>Подробнее</span></button>
-
                 <div class="indicator-group">
                   <button class="indicator" type="button"></button>
                   <button class="indicator current-indicator" type="button"></button>
@@ -244,7 +238,7 @@
             </div>
             <div class="card-description">
               <span class="number">03</span>
-              <h3 class="slider-title">Делай селфи, как Бен Стиллер!</h3>
+              <h3 class="slider-title">Делай селфи,<br> как Бен Стиллер!</h3>
               <p>
                 Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и
                 весом всего 5 кг.
@@ -275,7 +269,6 @@
           </li>
         </ul>
       </section>
-
       <section class="category-catalog">
         <h2 class="visually-hidden">Каталог</h2>
         <ul class="category-list">
@@ -283,7 +276,7 @@
             </a>
           </li>
           <li class="category-item">
-            <a class="category-item-link monopods" href="#"> Моноподы для селфи
+            <a class="category-item-link monopods" href="#"> Моноподы <br>для селфи
             </a>
           </li>
           <li class="category-item">
@@ -303,11 +296,9 @@
       </section>
     </div>
     <section class="services">
-
       <div class="page-container services-container">
         <div class="position-absolute">
           <h2 class="visually-hidden">Сервисы</h2>
-
           <div class="services-navigation">
             <button class="btn btn-services" type="button"><span>Доставка</span></button>
             <button class="btn btn-services" type="button"><span>Гарантия</span></button>
@@ -315,13 +306,11 @@
           </div>
           <ul class="services-list">
             <li class="services-item delivery">
-
               <h3 class="services-title">Доставка</h3>
               <p>
                 Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы
                 неплохо заработаем, поднимая его на ваш этаж.
               </p>
-
             </li>
             <li class="services-item visually-hidden garanty">
               <h3 class="services-title">Гарантия</h3>
@@ -329,7 +318,6 @@
                 Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим
                 вам новый. Товар, не дом, конечно же.
               </p>
-
             </li>
             <li class="services-item visually-hidden credit">
               <h3 class="services-title">Кредит</h3>
@@ -519,35 +507,61 @@
       </section>
     </div>
   </footer>
-  <div class="modal-container">
+  <div class="modal-container modal-container-close">
     <div class="modal modal-delivery">
       <section class="modal-content">
         <h2 class="modal-title">Доставка под заказ</h2>
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="modal-fieldset">
-            <p class="field-group modal-name">
+            <div class="field-group modal-name">
               <label class="field-group-label" for="modal-name">Ваше имя:</label>
-              <input class="form-field" type="text" id="modal-name" name="modal-name" placeholder="Введите имя" />
-            </p>
-            <p class="field-group modal-email">
+              <input class="form-field oninput" type="text" id="modal-name" name="modal-name"
+                placeholder="Введите имя" />
+              <span class="field-span">Добавьте имя</span>
+            </div>
+            <div class="field-group modal-email">
               <label class="field-group-label" for="modal-email">Ваш e-mail:</label>
-              <input class="form-field" type="email" id="modal-email" name="modal-email" placeholder="Введите e-mail" />
-            </p>
+              <input class="form-field oninput" type="email" id="modal-email" name="modal-email"
+                placeholder="Введите e-mail" />
+              <span class="field-span">Забавный у вас адрес</span>
+            </div>
           </div>
           <div class="modal-fieldset">
-            <p class="field-group modal-order">
+            <div class="field-group modal-order">
               <label class="field-group-label" for="modal-order">Что нужно привезти:</label>
-              <input class="form-field" type="text" id="modal-order" name="modal-order"
+              <input class="form-field oninput" type="text" id="modal-order" name="modal-order"
                 placeholder="В свободной форме" />
-            </p>
+            </div>
             <div class="field-group modal-number">
-              <label class="field-group-label" for="modal-number">Количество:</label>
-              <p class="modal-number-container">
-                <button type="submit" class="modal-button number-minus"></button>
-                <input class="form-field field-number" type="text" value="1" id="modal-number" name="modal-number"
-                  placeholder="1" />
-                <button type="submit" class="modal-button number-plus"></button>
-              </p>
+              <span class="field-group-label field-label-icon">
+                <label class="field-group-label" for="modal-number">Количество:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="13" fill="#FFE17F" />
+                      <path d="M14 7H12V9H14V7Z" fill="black" />
+                      <path d="M14 11H12V19H14V11Z" fill="black" />
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно.
+                    Привезём сколько получится по требованиям
+                    к провозу багажа.</span>
+                </span>
+              </span>
+              <div class="modal-number-container">
+                <button type="submit" class="modal-button number-minus">
+                  <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 0H0V2H16V0Z" fill="black" />
+                  </svg>
+                </button>
+                <input class="field-number" type="number" id="modal-number" value="1" name="modal-number" min="1"
+                  max="100" />
+                <button type="submit" class="modal-button number-plus"><svg width="16" height="16" viewBox="0 0 16 16"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
           <button class="btn modal-form-button" type="submit"><span>Отправить</span></button>

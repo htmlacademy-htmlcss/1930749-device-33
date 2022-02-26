@@ -278,7 +278,7 @@ ul:not(.transport-company) {
 }
 
 .popover::before {
-  content: url("../images/icons/popover-vector.svg");
+  content: url("../images/icons/popover-tooltip-vector.svg");
   position: absolute;
   top: -15px;
   left: 50%
@@ -533,6 +533,7 @@ ul:not(.transport-company) {
   width: 220px;
   padding: 0;
   position: relative;
+  letter-spacing: 0.2em
 }
 
 .btn span {
@@ -680,8 +681,10 @@ ul:not(.transport-company) {
   line-height: 19px;
   text-transform: uppercase;
   color: #000000;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin: 0;
+  letter-spacing: 0.2em;
 }
 
 .catalog-filter {
@@ -697,10 +700,13 @@ ul:not(.transport-company) {
   font-size: 18px;
   line-height: 20px;
   color: #000000;
+  letter-spacing: -0.02em;
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
-  position: relative;
+  width: 200px;
+  padding-top: 12px;
+  border-top: 2px solid #000000;
 }
 
 .catalog-filter-form {
@@ -711,14 +717,7 @@ ul:not(.transport-company) {
   border: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 47px;
-}
-
-.catalog-filter-title::before {
-  content: url("../images/icons/line-1.svg");
-  line-height: 0px;
-  position: absolute;
-  top: -12px;
+  margin-bottom: 35px;
 }
 
 .catalog-filter-list {
@@ -746,6 +745,7 @@ ul:not(.transport-company) {
 }
 
 .select-control {
+  width: 160px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1017,6 +1017,7 @@ ul:not(.transport-company) {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  letter-spacing: 0.2em;
 }
 
 
@@ -1061,11 +1062,12 @@ ul:not(.transport-company) {
   height: 100px;
   margin-bottom: 29px;
   margin-right: 15px;
+  margin-top: 121px;
   position: relative;
 }
 
 .slider {
-  margin-top: -80px;
+  margin-top: -150px;
   margin-bottom: 70px;
 }
 
@@ -1104,7 +1106,7 @@ ul:not(.transport-company) {
   position: absolute;
   left: 20px;
   top: 211px;
-
+  padding: 0;
 }
 
 .btn-arrow-forward {
@@ -1113,6 +1115,7 @@ ul:not(.transport-company) {
   position: absolute;
   right: 0px;
   top: 211px;
+  padding: 0;
 }
 
 .btn-arrow-back:hover, .btn-arrow-forward:hover {
@@ -1136,7 +1139,7 @@ ul:not(.transport-company) {
 .btn-slider {
   display: flex;
   margin-top: 51px;
-  margin-bottom: 39px;
+  margin-bottom: 49px;
   justify-content: space-between;
 
 }
@@ -1148,13 +1151,15 @@ ul:not(.transport-company) {
   color: #FFFFFF;
   position: absolute;
   right: 49px;
-  top: 5px;
+  top: 82px;
 
 }
 
 .characterictic-list {
+  display: flex;
   margin: 0;
   padding: 0;
+  margin-bottom: 38px;
 }
 
 .characterictic-item {
@@ -1162,16 +1167,24 @@ ul:not(.transport-company) {
   margin-right: 20px;
 }
 
+.card-item:last-child .characterictic-item {
+  margin-right: 40px;
+}
+
 .characterictic-description {
   font-size: 36px;
   line-height: 30px;
   color: #000000;
+  margin: 0;
+  padding: 0;
   margin-bottom: 12px;
 }
 
 .characterictic-termin {
   font-size: 16px;
   line-height: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .category-catalog {
@@ -1210,8 +1223,6 @@ ul:not(.transport-company) {
   display: flex;
   width: 160px;
   height: 160px;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 33px;
 }
 
@@ -1332,26 +1343,23 @@ ul:not(.transport-company) {
 
 .delivery::after {
   content: url("../images/icons/delivery.svg");
-  width: 136px;
-  height: 164px;
   position: absolute;
   right: 63px;
+  top: 77px;
 }
 
 .garanty::after {
   content: url("../images/icons/garanty.svg");
-  width: 136px;
-  height: 164px;
   position: absolute;
   right: 63px;
+  top: 62px;
 }
 
 .credit::after {
   content: url("../images/icons/credit.svg");
-  width: 136px;
-  height: 164px;
   position: absolute;
   right: 63px;
+  top: 65px;
 }
 
 .delivery-section {
@@ -1380,6 +1388,7 @@ ul:not(.transport-company) {
   padding-top: 40px;
   padding-bottom: 40px;
   border: 0px;
+  letter-spacing: 0.2em;
 }
 
 .delivery-button::before {
@@ -1397,7 +1406,6 @@ ul:not(.transport-company) {
 }
 
 .delivery-icon {
-
   width: 125px;
   height: 100px;
   position: absolute;
@@ -1502,6 +1510,7 @@ ul:not(.transport-company) {
   line-height: 20px;
   color: #000000;
   height: 20px;
+  letter-spacing: -0.02em;
 }
 
 .transport-company-item:last-child {
@@ -1558,16 +1567,42 @@ ul:not(.transport-company) {
   height: 55px;
   background-color: #F0F0F0;
   width: 557px;
+  color: #000000;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  padding: 0;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 16px;
+}
+
+.field:placeholder-shown {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  opacity: 0.5;
+}
+
+.field:focus {
+  background-color: #DCDCDC;
 }
 
 .field:focus-within {
   outline: none;
+}
+
+.field:invalid {
+  border-color: #FF3D3D;
+  background-color: #F0F0F0;
+}
+
+.field:disabled {
+  opacity: 0.3;
 }
 
 .btn-subscription {
@@ -1575,6 +1610,7 @@ ul:not(.transport-company) {
   font-size: 18px;
   font-weight: 800;
   line-height: 21px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-align: center;
   display: flex;
@@ -1640,6 +1676,7 @@ ul:not(.transport-company) {
 
 .free::before {
   content: url("../images/icons/free.svg");
+  margin-right: 16px;
 }
 
 .page-footer {
@@ -1741,6 +1778,16 @@ ul:not(.transport-company) {
   text-align: center;
   text-decoration: none;
   color: #FFFFFF;
+  letter-spacing: 0.2em;
+}
+
+.footer-phone:hover {
+  color: #FFC700;
+}
+
+.footer-phone:active {
+  color: #FFC700;
+  opacity: 0.3;
 }
 
 .footer-link:hover {
@@ -1748,11 +1795,7 @@ ul:not(.transport-company) {
   border-bottom: 2px solid #FFC700;
 }
 
-.footer-phone:hover {
-  color: #FFC700;
-}
-
-.footer-link:active, .footer-phone:active {
+.footer-link:active {
   color: #FFC700;
   border-bottom: 2px solid #FFC700;
   opacity: 0.3;
@@ -1828,6 +1871,10 @@ ul:not(.transport-company) {
   background-color: rgba(240, 240, 240, 0.9);
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal {
   position: relative;
   margin: auto;
@@ -1838,10 +1885,14 @@ ul:not(.transport-company) {
   box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
+.modal-form-button {
+  width: 200px;
+}
+
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 84px;
+  top: 94px;
   right: 80px;
   width: 26px;
   height: 26px;
@@ -1850,6 +1901,21 @@ ul:not(.transport-company) {
   background-repeat: no-repeat;
   background-color: #FFFFFF;
   cursor: pointer;
+}
+
+.modal-close-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  ;
+}
+
+.modal-close-button:active {
+  opacity: 0.3;
+}
+
+.modal-close-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .modal-title {
@@ -1880,47 +1946,16 @@ ul:not(.transport-company) {
 .field-group {
   display: flex;
   flex-direction: column;
-  margin: 0;
+
 }
 
-.form-field {
-  height: 60px;
-  background-color: #F0F0F0;
-  border: none;
-  padding: 20px;
+.field-group .field-span {
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-}
-
-.modal-button, .field-number {
-  width: 60px;
-  border: none;
-}
-
-.modal-name, .modal-email {
-  width: 360px;
-}
-
-.modal-order {
-  width: 540px;
-}
-
-.modal-number {
-  width: 180px;
-}
-
-.modal-number-container {
-  display: flex;
-  height: 60px;
-  padding: 0;
-  margin: 0;
-}
-
-.modal-form-button {
-  width: 200px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
 }
 
 .field-group-label {
@@ -1932,4 +1967,211 @@ ul:not(.transport-company) {
   letter-spacing: -0.02em;
   color: #000000;
   margin-bottom: 14px;
+}
+
+.form-field {
+  height: 60px;
+  background-color: #F0F0F0;
+  border: none;
+  padding: 20px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.form-field:hover {
+  background-color: #DCDCDC;
+  cursor: pointer;
+}
+
+.form-field:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.form-field:invalid {
+  border: 2px solid #FF3D3D;
+}
+
+.form-field:invalid+span {
+  color: #FF3D3D;
+}
+
+.form-field:disabled {
+  opacity: 0.3;
+}
+
+.modal-number {
+  width: 180px;
+}
+
+.modal-number-container {
+  display: flex;
+  width: 180px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.field-number {
+  width: 100%;
+  background-color: #F0F0F0;
+  border: none;
+  padding: 0;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.field-number {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+.field-number::-webkit-outer-spin-button,
+.field-number::-webkit-inner-spin-button {
+  display: none;
+}
+
+.field-number:hover {
+  cursor: pointer;
+}
+
+.field-number:focus {
+  outline: none;
+}
+
+.field-number:invalid {
+  outline: 2px solid #FF3D3D;
+}
+
+.field-number:disabled {
+  opacity: 0.3;
+}
+
+.modal-name, .modal-email {
+  width: 360px;
+}
+
+.modal-name .form-field {
+  background-image: url("../images/icons/modal-name.svg");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+}
+
+.modal-email .form-field {
+  background-image: url("../images/icons/modal-email.svg");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+}
+
+.modal-button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  display: block;
+  padding: 0;
+  background-color: #F0F0F0;
+  position: absolute;
+  z-index: 1;
+}
+
+.number-minus {
+  top: 0px;
+  left: 0px;
+}
+
+.number-minus svg {
+  position: absolute;
+  left: 22px;
+  top: 29px
+}
+
+.number-plus {
+  top: 0px;
+  right: 0px;
+}
+
+.modal-button:hover {
+  cursor: pointer;
+  background-color: #EBEBEB;
+}
+
+.modal-button:hover svg {
+  opacity: 0.6;
+}
+
+.modal-button:active svg {
+  opacity: 0.3;
+}
+
+.modal-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.modal-button:disabled {
+  background-color: #FBFBFB;
+  opacity: 0.3;
+}
+
+.modal-order {
+  width: 540px;
+}
+
+.tooltip {
+  position: absolute;
+}
+
+.tooltip-toggle {
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: block;
+  margin-left: 8px;
+  margin-top: -3px;
+}
+
+.tooltip-toggle:hover, .tooltip-toggle:focus {
+  cursor: pointer;
+}
+
+.field-group-label:hover,
+.field-group-label:focus {
+  cursor: pointer;
+}
+
+.field-group-label:hover .tooltip-text,
+.field-group-label:focus .tooltip-text {
+  display: block;
+}
+
+.tooltip-text {
+  display: none;
+  width: 200px;
+  background-color: #000000;
+  color: #FFFFFF;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 19px;
+  position: absolute;
+  z-index: 2;
+  margin-top: 8px;
+  left: -130px;
+}
+
+.tooltip-text::before {
+  content: url("../images/icons/popover-tooltip-vector.svg");
+  position: absolute;
+  top: -15px;
+  right: 42px;
 }
