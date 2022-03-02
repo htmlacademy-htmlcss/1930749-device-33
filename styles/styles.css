@@ -108,7 +108,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.header-logo:focus {
+.header-logo:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -161,7 +161,7 @@ ul:not(.transport-company) {
   background-color: #FFE17F;
 }
 
-.input-search:focus {
+.input-search:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -188,10 +188,10 @@ ul:not(.transport-company) {
 }
 
 .button-search:active {
-  color: #4C4C4C;
+  color: #444444;
 }
 
-.button-search:focus {
+.button-search:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -218,21 +218,32 @@ ul:not(.transport-company) {
   z-index: 6;
 }
 
+.login {
+  height: 30px;
+  width: 231px;
+}
+
+.logout-link {
+  text-decoration: none;
+  color: #B39E59;
+  margin-left: 28px;
+}
+
 .navigation-user .navigation-item {
-  padding-left: 27px;
+  padding-left: 22px;
   position: relative;
 }
 
-.navigation-link:hover, .menu-link:hover {
+.navigation-item:hover .navigation-link, .subcatalog-item:hover a {
   opacity: 0.6;
   cursor: pointer;
 }
 
-.navigation-link:active, .menu-link:active {
+.navigation-item:active .navigation-link, .subcatalog-item:active a {
   opacity: 0.3;
 }
 
-.navigation-item:focus-within {
+.navigation-item:focus-within, .subcatalog-item:focus-within {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -241,8 +252,8 @@ ul:not(.transport-company) {
   outline: none;
 }
 
-
 .navigation-user .navigation-item:last-child {
+  padding-left: 43px;
   margin-right: 0;
 }
 
@@ -254,16 +265,15 @@ ul:not(.transport-company) {
   margin: auto;
 }
 
-.login {
-  height: 30px;
-  width: 231px;
+.popover-close-button:active .popover {
+  display: block;
 }
 
 .popover {
   display: none;
   position: absolute;
   top: 36px;
-  right: -83px;
+  right: -70px;
   box-sizing: border-box;
   width: 320px;
   min-height: 140px;
@@ -298,6 +308,15 @@ ul:not(.transport-company) {
   align-items: flex-start;
   height: 83px;
   padding: 20px;
+}
+
+.number-cart-item {
+  position: absolute;
+  left: -24px;
+  z-index: 1;
+  width: 40px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .product-name {
@@ -367,10 +386,11 @@ ul:not(.transport-company) {
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  width: 280px;
   margin: 20px;
   border: 0;
-  padding: 25px 15px;
+  width: 280px;
+  height: 50px;
+  padding: 0;
 }
 
 .cart-button:hover {
@@ -417,12 +437,14 @@ ul:not(.transport-company) {
   position: relative;
 }
 
+
 .menu-catalog a, .menu-catalog svg {
   z-index: 2;
 }
 
 .navigation-list .navigation-item {
   margin-right: 45px;
+  height: 30px;
 }
 
 .navigation-list .navigation-item:last-child {
@@ -449,8 +471,6 @@ ul:not(.transport-company) {
   width: 1160px;
   height: 180px;
   background-color: #FFE17F;
-  margin: 0;
-  padding: 0;
   position: absolute;
   top: 29px;
   left: -60px;
@@ -516,6 +536,13 @@ ul:not(.transport-company) {
   text-decoration: none;
 }
 
+.navigation-list .current-item-menu {
+  border-bottom: 2px solid #000000;
+}
+
+.subcatalog .current-item-menu {
+  border-bottom: 1px solid #000000;
+}
 
 .menu-link, .btn, .contacts-link {
   font-family: "Raleway", sans-serif;
@@ -529,7 +556,7 @@ ul:not(.transport-company) {
 .btn {
   height: 40px;
   border: 0px;
-  background-color: white;
+  background-color: #ffffff;
   width: 220px;
   padding: 0;
   position: relative;
@@ -571,7 +598,7 @@ ul:not(.transport-company) {
   background-color: #FFCC33;
 }
 
-.btn:focus {
+.btn:focus-visible {
   outline: 2px solid #AF4FFF;
 }
 
@@ -854,7 +881,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.control-input:focus+.control-mark {
+.control-input:focus-visible+.control-mark {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -939,7 +966,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.select-control:focus-within {
+.select-control:focus {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -1014,58 +1041,19 @@ ul:not(.transport-company) {
 }
 
 .product-card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 360px;
   height: 452px;
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
-.product-card-link {
-  text-decoration: none;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.btn-product {
-  display: none;
+.product-new:before {
+  content: url("../images/icons/product-new.svg");
   position: absolute;
-  top: 40%;
-  left: 20%;
-  background: transparent;
-}
-
-.product-card-link:hover img {
-  opacity: 0.3;
-  outline: 1px solid #000000;
-  outline-offset: 2px;
-
-}
-
-.product-card-link:hover {
-  cursor: default;
-
-}
-
-.product-card-link:hover .product-card-title {
-  opacity: 0.6;
-}
-
-.product-card-link:hover .btn-product {
-  display: block;
-}
-
-.product-card-link:active .product-card-info {
-  opacity: 0.3;
-}
-
-.product-card-link:active .btn-product {
-  display: block;
-}
-
-.product-card-link:focus {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
+  right: 27px;
+  top: 27px;
 }
 
 .product-card-info {
@@ -1074,7 +1062,51 @@ ul:not(.transport-company) {
   align-items: flex-start;
   width: 360px;
   height: 40px;
-  margin-top: auto;
+}
+
+.product-card-link {
+  text-decoration: none;
+  height: 100%;
+}
+
+.product-card-title-link {
+  text-decoration: none;
+  width: 60%;
+}
+
+.link-product {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  background: transparent;
+  color: #000000;
+}
+
+.product-card:hover img {
+  opacity: 0.3;
+  outline: 1px solid #000000;
+}
+
+.product-card:hover .product-card-title-link {
+  opacity: 0.6;
+}
+
+.product-card:hover .link-product {
+  display: block;
+}
+
+.product-card:active .product-card-info {
+  opacity: 0.3;
+}
+
+.product-card:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.product-card-link:focus {
+  outline: none;
 }
 
 .product-card-title {
@@ -1084,8 +1116,6 @@ ul:not(.transport-company) {
   line-height: 20px;
   margin: 0;
   padding: 0;
-  text-align: start;
-  max-width: 60%;
 }
 
 .product-card-price {
@@ -1810,8 +1840,8 @@ ul:not(.transport-company) {
 
 .btn-subscription:active {
   background-color: #000000;
-  color: #4C4C4C;
-  border-color: #CECECE;
+  color: #444444;
+  border-color: #000000;
 }
 
 .btn-subscription:focus-within {
