@@ -335,7 +335,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.product-name:focus {
+.product-name:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -349,7 +349,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.cart-item-button:focus {
+.cart-item-button:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -401,7 +401,7 @@ ul:not(.transport-company) {
   color: #B39E59;
 }
 
-.cart-button:focus {
+.cart-button:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -545,7 +545,9 @@ ul:not(.transport-company) {
 }
 
 .btn {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   border: 0px;
   background-color: #ffffff;
@@ -558,10 +560,6 @@ ul:not(.transport-company) {
 .btn span {
   position: absolute;
   z-index: 1;
-  top: 9px;
-  bottom: 9px;
-  left: 2px;
-  right: 0;
 }
 
 .btn::before {
@@ -667,7 +665,6 @@ ul:not(.transport-company) {
 
 .breadcrumbs-link:hover {
   opacity: 0.6;
-  cursor: default;
 }
 
 .breadcrumbs-link:active {
@@ -788,7 +785,7 @@ ul:not(.transport-company) {
   background-image: url("../images/icons/range-slider-click.svg");
 }
 
-.range-toggle:focus {
+.range-toggle:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -962,6 +959,10 @@ ul:not(.transport-company) {
   outline-offset: 2px;
 }
 
+.select-control:disabled {
+  opacity: 0.1;
+}
+
 .btn-sorting {
   border: none;
   opacity: 0.3;
@@ -977,7 +978,7 @@ ul:not(.transport-company) {
   cursor: default;
 }
 
-.btn-sorting:focus {
+.btn-sorting:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -1032,13 +1033,12 @@ ul:not(.transport-company) {
 }
 
 .product-card {
+  position: relative;
   background-color: #ffffff;
-  width: 360px;
   height: 452px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
 }
 
 .product-new:before {
@@ -1052,7 +1052,6 @@ ul:not(.transport-company) {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 360px;
   height: 40px;
 }
 
@@ -1073,11 +1072,11 @@ ul:not(.transport-company) {
 
 .link-product {
   display: none;
+  color: #000000;
+  background: transparent;
   position: absolute;
   top: 40%;
   left: 20%;
-  background: transparent;
-  color: #000000;
 }
 
 .product-card:hover img {
@@ -1090,17 +1089,18 @@ ul:not(.transport-company) {
 }
 
 .product-card:hover .link-product {
-  display: block;
+  display: flex;
 }
 
 .product-card:active .product-card-info {
   opacity: 0.3;
 }
 
-.product-card:focus-within {
+.product-card:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
+
 
 .product-button {
   font-family: "Raleway", sans-serif;
@@ -1132,6 +1132,10 @@ ul:not(.transport-company) {
 .product-button:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
+}
+
+.product-button:disabled {
+  opacity: 0.3;
 }
 
 .pagination-container {
@@ -1230,6 +1234,14 @@ ul:not(.transport-company) {
   outline-offset: 2px;
 }
 
+.pagination-current {
+  opacity: 0.6;
+}
+
+.pagination-disabled {
+  color: #EBEBEB;
+}
+
 .slider-title, .services-title, .contacts-title, .subscription-title, .inner-header-title {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -1312,7 +1324,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.btn-arrow-back:focus, .btn-arrow-forward:focus {
+.btn-arrow-back:focus-visible, .btn-arrow-forward:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -1637,7 +1649,6 @@ ul:not(.transport-company) {
 
 .contacts-link {
   color: #000000;
-  display: block;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -1876,6 +1887,7 @@ ul:not(.transport-company) {
 
 .footer-container {
   display: flex;
+  justify-content: space-between;
 }
 
 .footer-contacts {
@@ -1911,13 +1923,13 @@ ul:not(.transport-company) {
 .page-footer-link {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-top: 137px;
   margin-bottom: 61px;
 }
 
 .footer-menu {
   display: flex;
-  margin: 0 auto;
 }
 
 .footer-navigation-list, .footer-social-list {
@@ -1927,8 +1939,7 @@ ul:not(.transport-company) {
 }
 
 .footer-social {
-  margin-left: 151px;
-  margin-top: 62px;
+  margin: 0 auto;
 }
 
 .footer-social-item:not(:last-child) {
