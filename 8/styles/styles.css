@@ -43,6 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  min-width: 1440px;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -86,12 +87,12 @@ ul:not(.transport-company) {
 .header-container {
   display: flex;
   width: 1160px;
-  height: 186px;
+  min-height: 186px;
   flex-direction: column;
   position: absolute;
   padding-left: 60px;
   padding-right: 60px;
-  top: -22px;
+  top: -23px;
   bottom: 22px;
 }
 
@@ -118,15 +119,13 @@ ul:not(.transport-company) {
   justify-content: space-between;
   align-items: center;
   margin: 0px 0px 30px 0px;
-  width: 1040px;
-  height: 40px;
 }
 
 .search-field {
   display: flex;
-  height: 40px;
   margin: 0px 0px;
   width: 50%;
+  height: 100%;
 }
 
 .search-field-icon {
@@ -140,6 +139,7 @@ ul:not(.transport-company) {
   top: 0;
   bottom: 0;
   left: 16px;
+
 }
 
 .search {
@@ -154,7 +154,7 @@ ul:not(.transport-company) {
   align-items: center;
   padding: 0px 0px 0px 48px;
   width: 359px;
-  height: 40px;
+  height: 100%;
   border: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 50px 0px 0px 50px;
@@ -169,14 +169,13 @@ ul:not(.transport-company) {
 .button-search {
   margin: 0;
   width: 160px;
-  height: 40px;
   border: 2px solid #000000;
   box-sizing: border-box;
   border-radius: 0px 20px 20px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 0px;
   border-left: 0px;
   background-color: #FFE17F;
 }
@@ -206,7 +205,7 @@ ul:not(.transport-company) {
   width: 50%;
   padding-top: 5px;
   padding-bottom: 5px;
-  margin-left: 26px;
+  margin-left: 25px;
 }
 
 .navigation-user {
@@ -219,8 +218,7 @@ ul:not(.transport-company) {
 }
 
 .login {
-  height: 30px;
-  width: 231px;
+  width: 220px;
 }
 
 .logout-link {
@@ -229,32 +227,30 @@ ul:not(.transport-company) {
   margin-left: 28px;
 }
 
-.navigation-user .navigation-item {
-  padding-left: 22px;
+.navigation-link {
+  color: #000000;
+  display: block;
+  text-decoration: none;
+  padding-left: 27px;
   position: relative;
 }
 
-.navigation-item:hover .navigation-link, .subcatalog-item:hover a {
+.navigation-item:nth-child(2) .navigation-link {
+  padding-left: 22px;
+}
+
+.navigation-link:hover, .subcatalog-link:hover, .menu-link:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
-.navigation-item:active .navigation-link, .subcatalog-item:active a {
+.navigation-link:active, .subcatalog-link:active, .menu-link:active {
   opacity: 0.3;
 }
 
-.navigation-item:focus-within, .subcatalog-item:focus-within {
+.navigation-link:focus-visible, .subcatalog-link:focus-visible, .menu-link:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
-}
-
-.navigation-item:focus-within a {
-  outline: none;
-}
-
-.navigation-user .navigation-item:last-child {
-  padding-left: 43px;
-  margin-right: 0;
 }
 
 .navigation-icon {
@@ -265,9 +261,6 @@ ul:not(.transport-company) {
   margin: auto;
 }
 
-.popover-close-button:active .popover {
-  display: block;
-}
 
 .popover {
   display: none;
@@ -312,11 +305,16 @@ ul:not(.transport-company) {
 
 .number-cart-item {
   position: absolute;
-  left: -24px;
+  height: 21px;
+  width: 21px;
+  left: -15px;
   z-index: 1;
-  width: 40px;
+  top: 5px;
   display: flex;
-  justify-content: flex-end;
+  background-color: #ffffff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-name {
@@ -337,7 +335,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.product-name:focus {
+.product-name:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -351,7 +349,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.cart-item-button:focus {
+.cart-item-button:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -403,7 +401,7 @@ ul:not(.transport-company) {
   color: #B39E59;
 }
 
-.cart-button:focus {
+.cart-button:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -416,8 +414,10 @@ ul:not(.transport-company) {
 .menu {
   display: flex;
   justify-content: space-between;
-  width: 1040px;
-  height: 50px;
+}
+
+.menu-catalog {
+  position: relative;
 }
 
 .navigation-list {
@@ -430,31 +430,16 @@ ul:not(.transport-company) {
   padding: 0;
 }
 
-.menu-catalog {
-  display: flex;
-  width: 293px;
-  justify-content: space-between;
-  position: relative;
-}
-
-
-.menu-catalog a, .menu-catalog svg {
-  z-index: 2;
-}
-
 .navigation-list .navigation-item {
-  margin-right: 45px;
-  height: 30px;
+  margin-left: 45px;
 }
 
-.navigation-list .navigation-item:last-child {
-  margin-right: 0;
+.navigation-list .navigation-item:first-child {
+  margin-left: 0;
 }
 
 .catalog-link {
   display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
   letter-spacing: 0.2em;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -462,8 +447,18 @@ ul:not(.transport-company) {
   line-height: 21px;
   text-transform: uppercase;
   color: #000000;
-  text-align: center;
   text-decoration: none;
+  position: relative;
+  z-index: 2;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 67px;
+}
+
+.catalog-icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 .subcatalog {
@@ -472,8 +467,8 @@ ul:not(.transport-company) {
   height: 180px;
   background-color: #FFE17F;
   position: absolute;
-  top: 29px;
   left: -60px;
+  top: 30px;
   padding-left: 60px;
   padding-top: 33px;
   padding-bottom: 27px;
@@ -487,7 +482,12 @@ ul:not(.transport-company) {
   margin-right: 30px;
 }
 
+.subcatalog-item {
+  margin-bottom: 20px;
+}
+
 .subcatalog-link {
+  display: block;
   text-decoration: none;
   color: #000000;
   font-family: "Rubik", sans-serif;
@@ -497,25 +497,21 @@ ul:not(.transport-company) {
   line-height: 18px;
 }
 
-.menu-catalog:hover {
+.catalog-link:hover {
   cursor: pointer;
 }
 
-.menu-catalog:hover svg {
+.catalog-link:hover svg {
   opacity: 1;
 }
 
-.menu-catalog:active svg {
+.catalog-link:active svg {
   opacity: 1;
 }
 
-.menu-catalog:focus-within {
+.catalog-link:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
-}
-
-.menu-catalog:focus-within a {
-  outline: none;
 }
 
 .catalog-navigation-link {
@@ -524,17 +520,13 @@ ul:not(.transport-company) {
 }
 
 .menu-link {
+  display: block;
   color: #000000;
-  text-align: center;
   text-decoration: none;
   letter-spacing: 0.2em;
 }
 
-.navigation-link, .contacts-link {
-  color: #000000;
-  text-align: center;
-  text-decoration: none;
-}
+
 
 .navigation-list .current-item-menu {
   border-bottom: 2px solid #000000;
@@ -544,16 +536,18 @@ ul:not(.transport-company) {
   border-bottom: 1px solid #000000;
 }
 
-.menu-link, .btn, .contacts-link {
+.menu-link, .button {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 21px;
   text-transform: uppercase;
-  text-align: center;
 }
 
-.btn {
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   border: 0px;
   background-color: #ffffff;
@@ -563,13 +557,9 @@ ul:not(.transport-company) {
   letter-spacing: 0.2em
 }
 
-.btn span {
+.button span {
   position: absolute;
   z-index: 1;
-  top: 10px;
-  bottom: 10px;
-  left: 0;
-  right: 0;
 }
 
 .btn::before {
@@ -629,9 +619,6 @@ ul:not(.transport-company) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-
-  height: 85px;
   margin-bottom: 35px;
   margin-top: 35px;
   padding-left: 60px;
@@ -643,8 +630,6 @@ ul:not(.transport-company) {
 
 .breadcrumbs {
   display: flex;
-  width: 432px;
-  height: 19px;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -680,14 +665,13 @@ ul:not(.transport-company) {
 
 .breadcrumbs-link:hover {
   opacity: 0.6;
-  cursor: default;
 }
 
 .breadcrumbs-link:active {
   opacity: 0.3;
 }
 
-.breadcrumbs-link:focus-within {
+.breadcrumbs-link:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -738,18 +722,18 @@ ul:not(.transport-company) {
 
 .catalog-filter-form {
   width: 200px;
-  margin-top: 35px;
+  margin-top: 33px;
 }
 
 .catalog-filter-group {
   border: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 }
 
 .catalog-filter-group:first-child .catalog-filter-title {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .catalog-filter-list {
@@ -758,7 +742,11 @@ ul:not(.transport-company) {
 }
 
 .catalog-filter-item:not(:last-child) {
-  margin-bottom: 18px;
+  margin-bottom: 17px;
+}
+
+.catalog-filter-group:last-of-type .catalog-filter-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .range {
@@ -797,7 +785,7 @@ ul:not(.transport-company) {
   background-image: url("../images/icons/range-slider-click.svg");
 }
 
-.range-toggle:focus {
+.range-toggle:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -908,7 +896,7 @@ ul:not(.transport-company) {
 }
 
 .control-input[type="checkbox"]:checked+.control-mark::before {
-  content: url("../images/icons/tick\ 1.svg");
+  content: url("../images/icons/tick.svg");
   position: absolute;
   line-height: 0px;
 }
@@ -971,6 +959,10 @@ ul:not(.transport-company) {
   outline-offset: 2px;
 }
 
+.select-control:disabled {
+  opacity: 0.1;
+}
+
 .btn-sorting {
   border: none;
   opacity: 0.3;
@@ -986,7 +978,7 @@ ul:not(.transport-company) {
   cursor: default;
 }
 
-.btn-sorting:focus {
+.btn-sorting:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -1003,11 +995,11 @@ ul:not(.transport-company) {
 .gallery {
   margin: 0;
   padding: 0;
+  height: 560px;
 }
 
 .card-item {
   display: flex;
-  height: 560px;
 }
 
 .card-img {
@@ -1036,17 +1028,17 @@ ul:not(.transport-company) {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 360px);
-  gap: 40px 44px;
+  gap: 44px 40px;
   margin-bottom: 44px;
 }
 
 .product-card {
+  position: relative;
   background-color: #ffffff;
-  width: 360px;
   height: 452px;
   display: flex;
   flex-direction: column;
-  position: relative;
+  justify-content: space-between;
 }
 
 .product-new:before {
@@ -1060,53 +1052,7 @@ ul:not(.transport-company) {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 360px;
   height: 40px;
-}
-
-.product-card-link {
-  text-decoration: none;
-  height: 100%;
-}
-
-.product-card-title-link {
-  text-decoration: none;
-  width: 60%;
-}
-
-.link-product {
-  display: none;
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  background: transparent;
-  color: #000000;
-}
-
-.product-card:hover img {
-  opacity: 0.3;
-  outline: 1px solid #000000;
-}
-
-.product-card:hover .product-card-title-link {
-  opacity: 0.6;
-}
-
-.product-card:hover .link-product {
-  display: block;
-}
-
-.product-card:active .product-card-info {
-  opacity: 0.3;
-}
-
-.product-card:focus-within {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
-}
-
-.product-card-link:focus {
-  outline: none;
 }
 
 .product-card-title {
@@ -1116,13 +1062,45 @@ ul:not(.transport-company) {
   line-height: 20px;
   margin: 0;
   padding: 0;
+  width: 60%;
 }
 
 .product-card-price {
   color: #444444;
   line-height: 21px;
-  text-align: right;
 }
+
+.link-product {
+  display: none;
+  color: #000000;
+  background: transparent;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+.product-card:hover img {
+  opacity: 0.3;
+  outline: 1px solid #000000;
+}
+
+.product-card:hover .product-card-title {
+  opacity: 0.6;
+}
+
+.product-card:hover .link-product {
+  display: flex;
+}
+
+.product-card:active .product-card-info {
+  opacity: 0.3;
+}
+
+.product-card:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
 
 .product-button {
   font-family: "Raleway", sans-serif;
@@ -1138,6 +1116,7 @@ ul:not(.transport-company) {
   justify-content: center;
   align-items: center;
   border: 3px solid #E5E5E5;
+  letter-spacing: 0.2em;
 }
 
 .product-button:hover {
@@ -1150,9 +1129,13 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.product-button:focus {
+.product-button:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
+}
+
+.product-button:disabled {
+  opacity: 0.3;
 }
 
 .pagination-container {
@@ -1183,7 +1166,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.pagination-next:focus, .pagination-prev:focus {
+.pagination-next:focus-visible, .pagination-prev:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -1208,21 +1191,19 @@ ul:not(.transport-company) {
 
 .pagination-item {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  opacity: 0.3;
-  color: #444444;
 }
 
 .pagination-link {
   text-decoration: none;
   color: #444444;
+  opacity: 0.3;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  letter-spacing: 0.2em;
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 
@@ -1233,25 +1214,32 @@ ul:not(.transport-company) {
   line-height: 21px;
   text-transform: uppercase;
   text-align: center;
+  text-decoration: none;
   color: #000000;
+  letter-spacing: 0.2em;
 }
 
-.pagination-item:hover {
+.pagination-link:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
-.pagination-item:active {
+.pagination-link:active {
   opacity: 0.1;
   cursor: default;
 }
 
-.pagination-item:focus-within {
+.pagination-link:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
 
-.pagination-item:focus-within a {
-  outline: none;
+.pagination-current {
+  opacity: 0.6;
+}
+
+.pagination-disabled {
+  color: #EBEBEB;
 }
 
 .slider-title, .services-title, .contacts-title, .subscription-title, .inner-header-title {
@@ -1263,17 +1251,19 @@ ul:not(.transport-company) {
 }
 
 .slider-title {
-  width: 545px;
-  height: 100px;
   margin-bottom: 29px;
-  margin-right: 15px;
-  margin-top: 121px;
+  margin-top: 122px;
   position: relative;
 }
 
 .slider {
   margin-top: -150px;
   margin-bottom: 70px;
+}
+
+.indicator-group {
+  display: flex;
+  align-items: center;
 }
 
 .indicator {
@@ -1296,7 +1286,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.indicator:focus {
+.indicator:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -1311,7 +1301,7 @@ ul:not(.transport-company) {
   background-color: #FFFFFF;
   border: none;
   position: absolute;
-  left: 20px;
+  left: 30px;
   top: 211px;
   padding: 0;
 }
@@ -1334,7 +1324,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.btn-arrow-back:focus, .btn-arrow-forward:focus {
+.btn-arrow-back:focus-visible, .btn-arrow-forward:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -1399,17 +1389,16 @@ ul:not(.transport-company) {
 }
 
 .category-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
+  gap: 40px;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
 }
 
 .category-item {
   display: flex;
-  margin-right: 40px;
-  width: 160px;
-  height: 253px;
+  min-height: 253px;
 }
 
 .category-item:last-child {
@@ -1423,6 +1412,7 @@ ul:not(.transport-company) {
   line-height: 24px;
   color: #000000;
   text-decoration: none;
+  letter-spacing: -0.02em;
 }
 
 .category-item-link::before {
@@ -1430,7 +1420,7 @@ ul:not(.transport-company) {
   display: flex;
   width: 160px;
   height: 160px;
-  margin-bottom: 33px;
+  margin-bottom: 32px;
 }
 
 .category-item-link:hover::before {
@@ -1442,7 +1432,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.category-item-link:focus-within {
+.category-item-link:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -1473,15 +1463,15 @@ ul:not(.transport-company) {
 
 .services {
   background-color: #FFFFFF;
-  height: 391px;
+  min-height: 391px;
   position: relative;
-
+  margin-bottom: 70px;
 }
 
 .services::before {
   content: "";
   background-color: #F0F0F0;
-  height: 289px;
+  min-height: 289px;
   width: 100%;
   position: absolute;
   top: 102px;
@@ -1492,22 +1482,13 @@ ul:not(.transport-company) {
   position: absolute;
 }
 
-
-.services-container {
-  display: flex;
-
-}
-
 .services-navigation {
   display: flex;
   flex-direction: column;
-  width: 287px;
-  padding-top: 62px;
-  margin-bottom: 72px;
+  padding-top: 64px;
   border-right: 7px solid black;
-  padding-right: 120px;
+  width: 279px;
 }
-
 
 .services-list {
   margin: 0;
@@ -1518,21 +1499,50 @@ ul:not(.transport-company) {
 
 .btn-services {
   width: 160px;
-  height: 40px;
-  margin-bottom: 35px;
   background: transparent;
+  margin-bottom: 35px;
+}
+
+.btn-services-current {
+  color: #FFE17F;
+}
+
+.btn-services-current::before {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  z-index: 0;
+  width: 171%;
+  height: 100%;
+  left: 0;
+}
+
+.btn-services-current:hover {
+  color: rgba(255, 225, 127, 0.5);
+}
+
+
+.btn-services-current:active {
+  color: rgba(255, 225, 127, 0.3);
+}
+
+.btn-services-current:focus-visible {
+  outline: none;
+}
+
+.btn-services-current:focus-visible::before {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .services-item {
   display: flex;
   flex-direction: column;
   width: 694px;
-  height: 174px;
-  margin-top: 72px;
-  margin-left: 116px;
-  margin-bottom: 72px;
-  margin-right: 63px;
-
+  padding-top: 73px;
+  padding-left: 116px;
+  padding-bottom: 72px;
+  padding-right: 63px;
 }
 
 .services-title {
@@ -1543,8 +1553,7 @@ ul:not(.transport-company) {
 }
 
 .services-item p {
-  width: 448px;
-  height: 90px;
+  width: 452px;
   margin: 0;
 }
 
@@ -1576,13 +1585,12 @@ ul:not(.transport-company) {
   width: 1160px;
   height: 100px;
   background-color: #F0F0F0;
-  margin-top: 70px;
   margin-bottom: 70px;
   position: relative;
 }
 
 .delivery-button {
-  width: 910px;
+  width: 100%;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -1592,7 +1600,7 @@ ul:not(.transport-company) {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
-  padding-top: 40px;
+  padding-top: 42px;
   padding-bottom: 40px;
   border: 0px;
   letter-spacing: 0.2em;
@@ -1637,60 +1645,67 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.delivery-section:focus-within {
+.delivery-button:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
 
-.delivery-button:focus {
-  outline: none;
-}
-
-.contacts-list {
+.contacts {
   display: flex;
-  width: 1160px;
   height: 545px;
   justify-content: space-between;
 
 }
 
-.contacts-list-item {
+.contacts-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
 
-.contacts-list-item::before {
+.contacts-item::before {
   content: url("../images/icons/frame.svg");
-  margin-bottom: 40px;
+  margin-bottom: 41px;
   line-height: 0px;
 }
 
-.contacts-list-item:first-child {
+.contacts-item:first-of-type {
   margin-right: 108px;
   width: 520px;
   height: 493px;
 }
 
-.contacts-list-item:first-child .contacts-link {
+.contacts-link {
+  color: #000000;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contacts-item:first-of-type .contacts-link {
   width: 270px;
   margin-top: 30px;
 }
 
-.contacts-list-item:last-child {
+.contacts-item:last-child {
   width: 532px;
   height: 545px;
 }
 
-.contacts-list-item:last-child .contacts-link {
+.contacts-item:last-child .contacts-link {
   width: 260px;
   margin-top: 30px;
 }
 
-.contacts-list-item p {
+.contacts-item p {
   margin-bottom: 30px;
   margin-top: 0;
+  margin-right: 23px;
 }
 
 
@@ -1705,7 +1720,6 @@ ul:not(.transport-company) {
   align-items: flex-start;
   margin: 0;
   padding: 0;
-
 }
 
 .transport-company-item {
@@ -1716,8 +1730,9 @@ ul:not(.transport-company) {
   font-size: 18px;
   line-height: 20px;
   color: #000000;
-  height: 20px;
   letter-spacing: -0.02em;
+  position: relative;
+  padding-left: 34px;
 }
 
 .transport-company-item:last-child {
@@ -1726,7 +1741,9 @@ ul:not(.transport-company) {
 
 .transport-company-item::before {
   content: url("../images/icons/list-style.svg");
-  margin-right: 26px;
+  position: absolute;
+  top: -4px;
+  left: 2px;
 }
 
 .contacts-subtitle {
@@ -1745,6 +1762,12 @@ ul:not(.transport-company) {
   color: #444444;
 }
 
+.contacts-phone:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  ;
+}
+
 .contacts-schedule {
   margin: 0;
   padding: 0;
@@ -1759,13 +1782,13 @@ ul:not(.transport-company) {
 .subscription-container {
   display: flex;
   flex-direction: column;
-
 }
 
 .subscription-description {
   display: flex;
   justify-content: space-between;
   margin-top: 64px;
+  margin-bottom: 144px;
 }
 
 .field {
@@ -1799,7 +1822,7 @@ ul:not(.transport-company) {
   background-color: #DCDCDC;
 }
 
-.field:focus-within {
+.field:focus {
   outline: none;
 }
 
@@ -1844,7 +1867,7 @@ ul:not(.transport-company) {
   border-color: #000000;
 }
 
-.btn-subscription:focus-within {
+.btn-subscription:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -1855,23 +1878,23 @@ ul:not(.transport-company) {
 
 .subscription-title {
   width: 348px;
-  height: 100px;
   margin: 0;
-
+  padding-left: 6px;
 }
 
 .subscription-description p {
   margin: 0;
   margin-top: 10px;
-  width: 560px;
-  height: 90px
+  width: 530px;
+  padding-left: 5px;
+  margin-right: 30px;
 }
 
 .subscription-container-form {
   display: flex;
   justify-content: space-between;
-  margin-top: 141px;
   margin-bottom: 56px;
+  height: 57px;
 }
 
 .subscription-form {
@@ -1879,6 +1902,11 @@ ul:not(.transport-company) {
   justify-content: space-between;
   align-items: center;
 
+}
+
+.free {
+  margin-bottom: 14px;
+  margin-top: 14px;
 }
 
 .free::before {
@@ -1900,9 +1928,8 @@ ul:not(.transport-company) {
 .footer-contacts {
   display: flex;
   flex-direction: column;
-  width: 234px;
-  height: 182px;
   margin-top: 62px;
+  margin-right: 117px;
 }
 
 .footer-contacts::after {
@@ -1931,42 +1958,36 @@ ul:not(.transport-company) {
 .page-footer-link {
   display: flex;
   flex-direction: column;
-  width: 444px;
+  justify-content: space-between;
   margin-top: 137px;
   margin-bottom: 61px;
 }
 
 .footer-menu {
   display: flex;
-  width: 100%;
-  height: 21px;
-  margin: 0 auto;
 }
 
 .footer-navigation-list, .footer-social-list {
-
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 .footer-social {
-  display: flex;
   margin: 0 auto;
-  width: 150px;
-  height: 40px;
-  margin-top: 62px;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 15px;
 }
 
 .footer-navigation-item {
   display: flex;
+  margin-right: 30px;
 }
 
-.footer-social-item {
-  display: flex;
+.footer-navigation-item:last-child {
+  margin-right: 0px;
 }
 
 .page-footer .contacts-address {
@@ -2008,7 +2029,7 @@ ul:not(.transport-company) {
   opacity: 0.3;
 }
 
-.footer-link:focus-within, .footer-phone:focus-within {
+.footer-link:focus-visible, .footer-phone:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
@@ -2017,6 +2038,7 @@ ul:not(.transport-company) {
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
+  margin-bottom: 63px;
 }
 
 .footer-contact-list {
@@ -2024,7 +2046,7 @@ ul:not(.transport-company) {
   flex-direction: column;
   margin-top: 140px;
   margin-bottom: 60px;
-  justify-content: space-between;
+  margin-left: 195px;
 }
 
 .htmlacademy-link {
@@ -2049,22 +2071,32 @@ ul:not(.transport-company) {
   outline: none;
 }
 
-.social-link:hover svg circle {
-  fill: #FFC700;
-  fill-opacity: 1;
+.social-link {
+  height: 40px;
+  width: 40px;
+  background-color: #7C7C7C;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.social-link:active svg circle {
-  fill: #FFC700;
+
+.social-link:hover {
+  background-color: #FFC700;
 }
 
-.social-link:active svg path {
+.social-link:active svg {
   fill: #C7A014
 }
 
-.social-link:focus-within svg {
+.footer-social-item:focus-within {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
+}
+
+.footer-social-item:focus-within a {
+  outline: none;
 }
 
 .modal-container {
