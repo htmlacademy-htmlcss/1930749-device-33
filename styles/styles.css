@@ -536,7 +536,7 @@ ul:not(.transport-company) {
   border-bottom: 1px solid #000000;
 }
 
-.menu-link, .btn {
+.menu-link, .button {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -544,7 +544,7 @@ ul:not(.transport-company) {
   text-transform: uppercase;
 }
 
-.btn {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -557,7 +557,7 @@ ul:not(.transport-company) {
   letter-spacing: 0.2em
 }
 
-.btn span {
+.button span {
   position: absolute;
   z-index: 1;
 }
@@ -1487,9 +1487,8 @@ ul:not(.transport-company) {
   flex-direction: column;
   padding-top: 64px;
   border-right: 7px solid black;
-  padding-right: 120px;
+  width: 279px;
 }
-
 
 .services-list {
   margin: 0;
@@ -1500,9 +1499,40 @@ ul:not(.transport-company) {
 
 .btn-services {
   width: 160px;
-  height: 40px;
-  margin-bottom: 35px;
   background: transparent;
+  margin-bottom: 35px;
+}
+
+.btn-services-current {
+  color: #FFE17F;
+}
+
+.btn-services-current::before {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  z-index: 0;
+  width: 171%;
+  height: 100%;
+  left: 0;
+}
+
+.btn-services-current:hover {
+  color: rgba(255, 225, 127, 0.5);
+}
+
+
+.btn-services-current:active {
+  color: rgba(255, 225, 127, 0.3);
+}
+
+.btn-services-current:focus-visible {
+  outline: none;
+}
+
+.btn-services-current:focus-visible::before {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .services-item {
@@ -1513,7 +1543,6 @@ ul:not(.transport-company) {
   padding-left: 116px;
   padding-bottom: 72px;
   padding-right: 63px;
-
 }
 
 .services-title {
@@ -1731,6 +1760,12 @@ ul:not(.transport-company) {
 .contacts-phone {
   text-decoration-line: underline;
   color: #444444;
+}
+
+.contacts-phone:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  ;
 }
 
 .contacts-schedule {
