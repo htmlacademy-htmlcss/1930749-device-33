@@ -17,7 +17,8 @@
       <div class="user-menu">
         <div class="search-field">
           <label for="search">
-            <span class="visually-hidden">Поиск по сайту</span></label>
+            <span class="visually-hidden">Поиск по сайту</span>
+          </label>
           <div class="search-field-icon">
             <span class="input-search-icon">
               <svg class="search-icon" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17"
@@ -52,7 +53,8 @@
                   <path d="M6 0.388916H4V12.3889H6V0.388916Z" fill="black" />
                   <path d="M2 4.38892H0V12.3889H2V4.38892Z" fill="black" />
                   <path d="M10 3.38892H8V12.3889H10V3.38892Z" fill="black" />
-                </svg>Сравнить</a>
+                </svg>Сравнить
+              </a>
             </li>
             <li class="navigation-item popover-close-button">
               <a href="#" class="navigation-link">
@@ -70,7 +72,8 @@
                     </clipPath>
                   </defs>
                 </svg>
-                Корзина</a>
+                Корзина
+              </a>
               <div class="popover popover-cart">
                 <div class="popover-content">
                   <ul class="cart-items-list">
@@ -130,17 +133,29 @@
           </a>
           <div class="subcatalog">
             <ul class="subcatalog-list">
-              <li class="subcatalog-item"><a class="subcatalog-link  current-item-menu" href="#">Виртуальная
-                  реальность</a></li>
-              <li class="subcatalog-item"><a class="subcatalog-link" href="#">Моноподы для селфи</a></li>
-              <li class="subcatalog-item"><a class="subcatalog-link" href="#">Экшн-камеры</a></li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link сurrent-item-menu" href="#">Виртуальная
+                  реальность</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link" href="#">Моноподы для селфи</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link" href="#">Экшн-камеры</a>
+              </li>
             </ul>
             <ul class="subcatalog-list">
-              <li class="subcatalog-item"><a class="subcatalog-link" href="#">Фитнес-браслеты</a></li>
-              <li class="subcatalog-item"><a class="subcatalog-link" href="#">Умные часы</a></li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link" href="#">Умные часы</a>
+              </li>
             </ul>
             <ul class="subcatalog-list">
-              <li class="subcatalog-item"><a class="subcatalog-link" href="#">Квадрокоптер</a></li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link" href="#">Квадрокоптер</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -162,36 +177,29 @@
     <div class="page-container">
       <section class="slider">
         <h2 class="visually-hidden">Самые популярные товары</h2>
+        <div class="arrow-container">
+          <button class="btn-arrow" type="button">
+            <span class="visually-hidden">Назад</span>
+          </button>
+          <button class="btn-arrow btn-arrow-forward" type="button">
+            <span class="visually-hidden">Вперед</span>
+          </button>
+        </div>
         <ul class="gallery">
           <li class="card-item">
             <div class="card-img">
-              <button class="btn-arrow-back" type="button">
-                <img class="arrow back" src="images/icons/arrow-back.svg" width="20" height="60" alt="Назад" />
-                <span class="visually-hidden">Назад</span>
-              </button>
               <img class="slider-img" src="images/slider-1.png" width="560" height="560"
                 alt="Квадрокоптер с мощным лазером." />
-              <button class="btn-arrow-forward" type="button">
-                <img class="arrow forward" src="images/icons/arrow-forward.svg" width="20" height="60" alt="Вперед" />
-                <span class="visually-hidden">Вперед</span>
-              </button>
             </div>
             <div class="card-description">
               <span class="number">01</span>
               <h3 class="slider-title">Порхает как бабочка,<br>жалит как пчела!
               </h3>
-              <p>
+              <p class="card-info">
                 Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под
                 стандартную камеру.
               </p>
-              <div class="btn-slider">
-                <button class="button btn" type="button"><span>Подробнее</span></button>
-                <div class="indicator-group">
-                  <button class="indicator current-indicator" type="button"></button>
-                  <button class="indicator" type="button"></button>
-                  <button class="indicator" type="button"></button>
-                </div>
-              </div>
+              <button class="card-button button btn" type="button"><span>Подробнее</span></button>
               <ul class="characterictic-list">
                 <li class="characterictic-item">
                   <p class="characterictic-description">800 м</p>
@@ -206,31 +214,16 @@
           </li>
           <li class="card-item visually-hidden">
             <div class="card-img">
-              <button class="btn-arrow-back" type="button">
-                <img class="arrow back" src="images/icons/arrow-back.svg" width="20" height="60" alt="Назад" />
-                <span class="visually-hidden">Назад</span>
-              </button>
               <img class="slider-img" src="images/slider-2.png" width="560" height="560"
                 alt="Мотивирующие фитнес-браслеты." />
-              <button class="btn-arrow-forward" type="button">
-                <img class="arrow forward" src="images/icons/arrow-forward.svg" width="20" height="60" alt="Вперед" />
-                <span class="visually-hidden">Вперед</span>
-              </button>
             </div>
             <div class="card-description">
               <span class="number">02</span>
               <h3 class="slider-title">Худеем <br>правильно!</h3>
-              <p>
+              <p class="card-info">
                 Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
               </p>
-              <div class="btn-slider">
-                <button class="button btn" type="button"><span>Подробнее</span></button>
-                <div class="indicator-group">
-                  <button class="indicator" type="button"></button>
-                  <button class="indicator current-indicator" type="button"></button>
-                  <button class="indicator" type="button"></button>
-                </div>
-              </div>
+              <button class="card-button button btn" type="button"><span>Подробнее</span></button>
               <ul class="characterictic-list">
                 <li class="characterictic-item">
                   <p class="characterictic-description">48 часов</p>
@@ -241,31 +234,16 @@
           </li>
           <li class="card-item visually-hidden">
             <div class="card-img">
-              <button class="btn-arrow-back" type="button">
-                <img class="arrow back" src="images/icons/arrow-back.svg" width="20" height="60" alt="Назад" />
-                <span class="visually-hidden">Назад</span>
-              </button>
-              <img class="sluder-img" src="images/slider-3.png" width="560" height="560" alt="Очень длинная палка." />
-              <button class="btn-arrow-forward" type="button">
-                <img class="arrow forward" src="images/icons/arrow-forward.svg" width="20" height="60" alt="Вперед" />
-                <span class="visually-hidden">Вперед</span>
-              </button>
+              <img class="slider-img" src="images/slider-3.png" width="560" height="560" alt="Очень длинная палка." />
             </div>
             <div class="card-description">
               <span class="number">03</span>
               <h3 class="slider-title">Делай селфи,<br> как Бен Стиллер!</h3>
-              <p>
+              <p class="card-info">
                 Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и
                 весом всего 5 кг.
               </p>
-              <div class="btn-slider">
-                <button class="button btn" type="button"><span>Подробнее</span></button>
-                <div class="indicator-group">
-                  <button class="indicator" type="button"></button>
-                  <button class="indicator" type="button"></button>
-                  <button class="indicator current-indicator" type="button"></button>
-                </div>
-              </div>
+              <button class="card-button button btn" type="button"><span>Подробнее</span></button>
               <ul class="characterictic-list">
                 <li class="characterictic-item">
                   <p class="characterictic-description">8,5 м</p>
@@ -283,6 +261,12 @@
             </div>
           </li>
         </ul>
+        <div class="btn-slider">
+          <ul class="indicator-group">
+            <li class="indicator-item"><button class="indicator current-indicator" type="button"></button></li>
+            <li class="indicator-item"><button class="indicator" type="button"></button></li>
+            <li class="indicator-item"><button class="indicator" type="button"></button></li>
+        </div>
       </section>
       <section class="category-catalog">
         <h2 class="visually-hidden">Каталог</h2>
@@ -292,8 +276,7 @@
             </a>
           </li>
           <li class="category-item">
-            <a class="category-item-link monopods" href="#"> Моноподы <br>для селфи
-            </a>
+            <a class="category-item-link monopods" href="#"> Моноподы <br>для селфи</a>
           </li>
           <li class="category-item">
             <a class="category-item-link  action" href="#">Экшн-камеры</a>
@@ -311,6 +294,7 @@
         </ul>
       </section>
     </div>
+
     <section class="services">
       <div class="page-container">
         <div class="position-absolute">
@@ -426,14 +410,18 @@
         <address class="contacts-address">Санкт-Петербург, набережная<br> реки Карповки, 5, литера П.
         </address>
       </section>
-
       <section class="footer-menu">
         <h3 class="visually-hidden">Сервисы и соцсети</h3>
         <ul class="footer-navigation-list">
-          <li class="footer-navigation-item"><a class="footer-link" href="#">Доставка</a></li>
-          <li class="footer-navigation-item"><a class="footer-link" href="#">Гарантия</a></li>
-          <li class="footer-navigation-item"><a class="footer-link" href="#">Контакты</a></li>
-
+          <li class="footer-navigation-item">
+            <a class="footer-link" href="#">Доставка</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a class="footer-link" href="#">Гарантия</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a class="footer-link" href="#">Контакты</a>
+          </li>
         </ul>
         <ul class="footer-social-list">
           <li class="footer-social-item">
