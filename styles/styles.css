@@ -471,6 +471,10 @@ body {
   right: 0px;
 }
 
+.catalog-icon-active {
+  display: none;
+}
+
 .subcatalog {
   display: none;
   width: 1160px;
@@ -514,11 +518,11 @@ body {
   cursor: pointer;
 }
 
-.catalog-link:hover svg {
+.catalog-link:hover .catalog-icon {
   opacity: 1;
 }
 
-.catalog-link:active svg {
+.catalog-link:active .catalog-icon {
   opacity: 1;
 }
 
@@ -569,20 +573,16 @@ body {
   padding: 0;
   position: relative;
   letter-spacing: 0.2em;
-}
-
-.button span {
-  position: absolute;
+  color: #000000;
   z-index: 1;
-  top: 10px;
 }
 
-.btn::before {
+.button::before {
   content: "";
   transition: 0.1s;
   position: absolute;
   background-color: #ffe17f;
-  z-index: 0;
+  z-index: -1;
   width: 100%;
   height: 20%;
   top: 16px;
@@ -590,24 +590,24 @@ body {
   left: 0;
 }
 
-.btn:hover {
+.button:hover {
   cursor: pointer;
 }
 
-.btn:hover::before {
+.button:hover::before {
   height: 100%;
   top: 0;
 }
 
-.btn:active::before {
+.button:active::before {
   background-color: #ffcc33;
 }
 
-.btn:focus-visible {
+.button:focus-visible {
   outline: 2px solid #af4fff;
 }
 
-.btn:disabled {
+.button:disabled {
   opacity: 0.3;
 }
 
@@ -627,24 +627,24 @@ body {
 
 .slider {
   margin-bottom: 70px;
-  position: relative;
   margin-top: -36px;
+  position: relative;
+}
+.gallery {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  min-height: 560px;
+  position: relative;
 }
 
-.slider:before {
+.gallery:before {
   content: "";
   background-color: #ffe17f;
   width: 100%;
   position: absolute;
   top: 0px;
   height: 150px;
-}
-
-.gallery {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  min-height: 560px;
 }
 
 .card-item {
@@ -671,6 +671,7 @@ body {
 
 .card-button {
   margin-bottom: 49px;
+  text-decoration: none;
 }
 
 .slider-title,
@@ -692,12 +693,10 @@ body {
 }
 
 .btn-slider {
-  display: flex;
-  justify-content: space-between;
   position: absolute;
+  display: flex;
   right: 0;
-  top: 67%;
-  transform: translateY(-33%);
+  top: 364px;
   z-index: 1;
 }
 
@@ -706,7 +705,7 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -960,16 +959,18 @@ body {
 
 .btn-services-current {
   color: #ffe17f;
+  z-index: 1;
 }
 
 .btn-services-current::before {
   content: "";
   position: absolute;
   background-color: #000000;
-  z-index: 0;
+  z-index: -1;
   width: 178%;
   height: 100%;
   left: 0;
+  top: 0;
 }
 
 .btn-services-current:hover {
@@ -1007,28 +1008,28 @@ body {
 }
 
 .services-item p {
-  width: 452px;
+  min-width: 448px;
   margin: 0;
 }
 
 .delivery::after {
   content: url("../images/icons/delivery.svg");
   position: absolute;
-  right: 63px;
+  right: 56px;
   top: 77px;
 }
 
 .garanty::after {
   content: url("../images/icons/garanty.svg");
   position: absolute;
-  right: 63px;
+  right: 21px;
   top: 62px;
 }
 
 .credit::after {
   content: url("../images/icons/credit.svg");
   position: absolute;
-  right: 63px;
+  right: 21px;
   top: 65px;
 }
 
@@ -1412,7 +1413,7 @@ body {
 .footer-menu {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-top: 75px;
   width: 458px;
 }
@@ -1427,7 +1428,6 @@ body {
 .footer-navigation-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 52px;
 }
 
 .footer-social-list {
@@ -2328,6 +2328,7 @@ body {
   position: absolute;
   top: 40%;
   left: 20%;
+  text-decoration: none;
 }
 
 .product-card:hover img {
