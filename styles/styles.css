@@ -15,14 +15,6 @@
 }
 
 @font-face {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 800;
-  src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
@@ -2242,6 +2234,7 @@ body {
 .select-control:disabled {
   opacity: 0.1;
 }
+
 .sorting-button {
   display: flex;
   width: 60px;
@@ -2410,6 +2403,7 @@ body {
   margin-bottom: 78px;
   align-items: center;
 }
+
 .pagination-prev,
 .pagination-next {
   font-family: "Raleway", sans-serif;
@@ -2463,8 +2457,6 @@ body {
   padding: 0;
   min-width: 200px;
   min-height: 40px;
-  /* padding-left: 145px;
-  padding-right: 145px; */
 }
 
 .pagination-item {
