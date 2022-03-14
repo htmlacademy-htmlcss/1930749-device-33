@@ -566,7 +566,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  min-height: 40px;
   border: 0px;
   background-color: #ffffff;
   width: 220px;
@@ -584,7 +584,7 @@ body {
   background-color: #ffe17f;
   z-index: -1;
   width: 100%;
-  height: 20%;
+  min-height: 20%;
   top: 16px;
   bottom: 16px;
   left: 0;
@@ -595,7 +595,7 @@ body {
 }
 
 .button:hover::before {
-  height: 100%;
+  min-height: 100%;
   top: 0;
 }
 
@@ -696,7 +696,7 @@ body {
   position: absolute;
   display: flex;
   right: 0;
-  top: 364px;
+  top: 67%;
   z-index: 1;
 }
 
@@ -717,6 +717,9 @@ body {
   background-color: #ffffff;
   border-radius: 50%;
   cursor: pointer;
+}
+.indicator-item {
+  line-height: 0px;
 }
 
 .indicator-item:not(:last-child) {
@@ -1223,7 +1226,7 @@ body {
 
 .subscription {
   background-color: #f0f0f0;
-  height: 421px;
+  min-height: 421px;
 }
 
 .subscription-container {
@@ -1241,7 +1244,7 @@ body {
 .field {
   border: 0px;
   border-bottom: 3px solid #c4c4c4;
-  height: 55px;
+  min-height: 55px;
   background-color: #f0f0f0;
   width: 557px;
   color: #000000;
@@ -1296,7 +1299,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 253px;
-  height: 55px;
+  min-height: 55px;
   padding: 0;
   padding-left: 7px;
   position: relative;
@@ -1341,8 +1344,8 @@ body {
 .subscription-container-form {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 56px;
-  height: 57px;
+  margin-bottom: 55px;
+  min-height: 57px;
 }
 
 .subscription-form {
@@ -1364,12 +1367,11 @@ body {
 .page-footer {
   background-color: #444444;
   color: #ffffff;
-  height: 321px;
+  min-height: 321px;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
   padding-top: 62px;
 }
 
@@ -1377,6 +1379,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-right: 117px;
+  max-width: 240px;
 }
 
 .footer-contacts::after {
@@ -1407,7 +1410,6 @@ body {
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 65px;
-  white-space: nowrap;
 }
 
 .footer-menu {
@@ -1415,7 +1417,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding-top: 75px;
-  width: 458px;
+  max-width: 458px;
+  min-height: 198px;
 }
 
 .footer-navigation-list,
@@ -1434,6 +1437,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding-left: 11px;
 }
 
 .footer-social-item:not(:last-child) {
@@ -1508,7 +1512,7 @@ body {
 .footer-contact-list {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
+  margin-left: 190px;
   padding-top: 77px;
 }
 
@@ -1964,6 +1968,7 @@ body {
   padding-bottom: 25px;
   margin: 0;
   letter-spacing: 0.2em;
+  max-width: 200px;
 }
 
 .catalog-filter {
@@ -2073,7 +2078,7 @@ body {
   justify-content: space-between;
   appearance: textfield;
   position: relative;
-  height: 18px;
+  min-height: 18px;
 }
 
 .catalog-filter-label {
@@ -2124,7 +2129,7 @@ body {
   position: relative;
   font-size: 16px;
   line-height: 19px;
-  height: 20px;
+  min-height: 20px;
 }
 
 .control:hover {
@@ -2185,6 +2190,7 @@ body {
 
 .btn-filter {
   background: transparent;
+  margin-bottom: 20px;
 }
 
 .product-sorting {
@@ -2196,13 +2202,14 @@ body {
 .sorting {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 840px;
-  height: 70px;
-  padding: 25px 40px;
+  min-height: 70px;
+  padding: 0px 40px;
 }
 
 .select-control {
-  width: 160px;
+  max-width: 160px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -2215,8 +2222,7 @@ body {
   background-image: url("../images/icons/sorting-icon.svg");
   background-repeat: no-repeat;
   background-position: right center;
-  margin-left: 193px;
-  margin-right: 201px;
+  margin: 0px 193px;
 }
 
 .select-control:hover {
@@ -2236,8 +2242,14 @@ body {
 .select-control:disabled {
   opacity: 0.1;
 }
-
+.sorting-button {
+  display: flex;
+  width: 60px;
+  height: 30px;
+  justify-content: space-between;
+}
 .btn-sorting {
+  width: 30px;
   border: none;
   opacity: 0.3;
 }
@@ -2286,7 +2298,7 @@ body {
 .product-card {
   position: relative;
   background-color: #ffffff;
-  height: 452px;
+  min-height: 452px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2303,7 +2315,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 40px;
+  min-height: 40px;
 }
 
 .product-card-title {
@@ -2361,7 +2373,7 @@ body {
   text-transform: uppercase;
   background-color: #ffffff;
   width: 760px;
-  height: 55px;
+  min-height: 55px;
   margin-bottom: 44px;
   display: flex;
   justify-content: center;
@@ -2394,13 +2406,21 @@ body {
   display: flex;
   justify-content: space-between;
   width: 760px;
-  height: 71px;
+  min-height: 71px;
   margin-bottom: 78px;
   align-items: center;
 }
-
 .pagination-prev,
 .pagination-next {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: 0.2em;
   padding: 25px;
 }
 
@@ -2428,22 +2448,23 @@ body {
 }
 
 .pagination-prev {
-  width: 128px;
+  min-width: 128px;
 }
 
 .pagination-next {
-  width: 141px;
+  min-width: 141px;
 }
 
 .pagination {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  width: 200px;
-  height: 40px;
-  margin-left: 145px;
-  margin-right: 145px;
+  min-width: 200px;
+  min-height: 40px;
+  /* padding-left: 145px;
+  padding-right: 145px; */
 }
 
 .pagination-item {
@@ -2457,23 +2478,10 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.pagination-prev,
-.pagination-next {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  color: #000000;
-  letter-spacing: 0.2em;
 }
 
 .pagination-link:hover {
