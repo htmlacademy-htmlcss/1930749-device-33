@@ -410,12 +410,13 @@ body {
 
 .menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 
 .menu-catalog {
   position: relative;
+  margin-right: 276px;
 }
 
 .navigation-list {
@@ -429,10 +430,11 @@ body {
   margin: 0;
   padding: 0;
   justify-content: space-between;
+  margin-right: -3px;
 }
 
 .navigation-list .navigation-item {
-  margin-right: 44px;
+  margin-right: 45px;
 }
 
 .navigation-list .navigation-item:nth-child(3n) {
